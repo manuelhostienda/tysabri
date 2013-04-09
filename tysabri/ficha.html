@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>.: Tysabri :.</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/tablets.css" />
+        <link rel="stylesheet" type="text/css" href="css/phone.css" />
+        <!-- JS -->
+        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.accordion.source.js"></script>
+        <script type="text/javascript" src="js/funciones.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                if (comprobarConexion()) {
+
+                    if (comprobarSoporte()) {
+                      
+                        descargarLibro();
+                    } else {
+                        alert('Su navegador no soporta el modo offline, Instale uno mas actualizado');
+                        window.location = "index.html";
+                    }
+                } else {
+                    if (localStorage.length > 0) {
+                        cargarContenido();
+
+                    } else {
+                        alert('No dispone de internet, ni de una copia local para la base de datos, intente nuevamente con conexion a internet');
+                        window.location = "index.html";
+                    }
+                }
+
+                /* var href = location.href;  
+                 var split = href.split("#"); 
+                 $("body").animate({scrollTop: $('a[href=#' + split[1] + ']').offset().top}, 1000);
+                 */
+           
+  
+            });
+
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <header id="header">
+                <img  src="images/top.png"/>
+            </header><!-- #header-->
+            <section id="middle">
+
+                <div id="container">
+                    <aside id="sideLeft">
+                        <a href="index.html" ><img src="images/logo.png" id="logo-side" /></a>
+                    </aside><!-- #sideLeft -->
+                    <div id="content">
+                        <div id="ver-video-phone">
+                            <div id="botones-header-phone">
+                                <button class="boton-info"> </button>
+                                <button class="boton-contacto"> </button>
+                            </div>
+                            <div id="imag-logo-phone">
+                                <a href="index.html"> <img src="images/logo.png" id="imagen-logo-phone" /></a>
+                            </div>
+                            <div id="buscador-phone" align="center">
+                                <input class="search-input" placeholder="Buscar" /> <button class="boton-lupa"> </button>
+                            </div>
+
+                        </div>
+
+                        <div id="buscar-ficha">
+                            <div id="buscador" align="right">
+                                <input class="search-input" placeholder="Buscar" /> <button class="boton-buscar">Buscar</button>
+                            </div>
+                        </div>
+                        <div class="header-barra-mobile"></div>
+                        <h2 class="ficha-titulo">Ficha Técnica</h2>
+
+                        <ul class="accordion">
+                            <li>
+                                <a class="lista-elemento" href="#1"></a>
+                                <div></div>
+
+                            </li>
+                            <li>
+                                <a class="lista-elemento" href="#2"></a>
+                                <div></div>
+
+                            </li>
+                            <li>
+                                <a class="lista-elemento" href="#3"></a>
+                                <div></div>
+
+                            </li>
+                            <li>
+
+                                <a class="lista-elemento" href="#4"><div class="texto-titulo-lista">4. DATOS CLÍNICOS</div><span class="mas-menos"></span></a>
+                                <ul>	
+                                    <li>
+                                        <a class="lista-elemento" href="#4-1"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a  class="lista-elemento" href="#4-2"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#4-3"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#4-4"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#4-5"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a  class="lista-elemento" href="#4-6"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#4-7"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#4-8"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#4-9"></a>
+                                        <div></div>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="lista-elemento" href="#5"><div class="texto-titulo-lista">5. PROPIEDADES FARMACOLÓGICAS</div><span class="mas-menos"></span></a>
+                                <ul>	
+                                    <li>
+                                        <a class="lista-elemento" href="#5-1"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#5-2"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#5-3"></a>
+                                        <div></div>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="lista-elemento" href="#6"><div class="texto-titulo-lista">6. DATOS FARMACÉUTICOS</div><span class="mas-menos"></span></a>
+                                <ul>	
+                                    <li>
+                                        <a class="lista-elemento" href="#6-1"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#6-2"></a>
+                                        <div></div>
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#6-3"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#6-4"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#6-5"></a>
+                                        <div></div>
+
+                                    </li>
+                                    <li>
+                                        <a class="lista-elemento" href="#6-6"></a>
+                                        <div></div>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="lista-elemento" href="#7"></a>
+                                <div></div>
+
+                            </li>
+                            <li>
+                                <a class="lista-elemento" href="#8"></a>
+                                <div></div>
+                            </li>
+                            <li>
+                                <a class="lista-elemento" href="#9"></a>
+                                <div></div>
+                            </li>
+                            <li>
+                                <a class="lista-elemento" href="#10"></a>
+                                <div></div>
+                            </li>
+                        </ul>
+                    </div><!-- #content-->
+                </div><!-- #container-->
+
+            </section><!-- #middle-->
+            <footer id="footer-ficha">
+                <div class="footer-barra"></div>
+                <div id="footer-enlaces">
+                    <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
+                    <a class="footer-text" href="creditos.html"><b>Créditos</b> </a>
+                    <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
+                </div>
+                <div id="footer-enlaces-phone">
+                    <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
+                    <a class="footer-text" href="creditos.html"><b>Créditos </b></a>
+                    <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
+                </div>
+            </footer>
+
+        </div><!-- fin del wrapper -->
+        <div id="cargando" align="center" style="display:none;"><br /><br /><br /><br /><img src="images/loading.gif" style="width:5%;"/></div>
+    </body>
+
+</html>

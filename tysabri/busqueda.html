@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>.: Tysabri :.</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <!-- FAVICON -->
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/tablets.css" />
+        <link rel="stylesheet" type="text/css" href="css/phone.css" />
+        <!-- JS -->
+        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <!--[if lt IE 10]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/highlight.js"></script>
+        <script type="text/javascript" src="js/funciones.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var textoABuscar = localStorage.getItem("texto-busqueda");
+                if (textoABuscar != "") {
+                    $(".search-input").val(textoABuscar);
+                    localStorage.setItem("texto-busqueda", "");
+                    buscarTexto(textoABuscar);
+                }
+
+                //eventos para buscar 
+                $('.boton-lupa').click(function() {
+                    var texto = $(this).prev().val();
+                    if (texto != "") {
+                        localStorage.setItem("texto-busqueda", "");
+                        buscarTexto(textoABuscar);
+                    }
+                });
+
+                $('.boton-buscar').click(function() {
+                    var texto = $(this).prev().val();
+                    if (texto != "") {
+                        localStorage.setItem("texto-busqueda", "");
+                        buscarTexto(texto);
+                    }
+                           });
+                           
+                           
+                $('a[href*="ficha"]').click(function(){
+                   console.log('hola'); 
+                });
+
+            });
+        </script>
+        <style>
+
+            #middle {
+                width: 100%;
+                padding-bottom: 110px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <header id="header">
+                <img  src="images/top.png"/>
+            </header><!-- #header-->
+            <section id="middle">
+
+                <div id="container">
+                    <aside id="sideLeft">
+                        <a href="index.html" ><img src="images/logo.png" id="logo-side" /></a>
+                    </aside><!-- #sideLeft -->
+                    <div id="content">
+                        <div id="ver-video-phone">
+                            <div id="botones-header-phone">
+                                <button class="boton-info"> </button>
+                                <div id="boton-presentacion-phone">
+                                    <img src="images/boton-play.png"/>
+                                </div>
+                                <span>VÍDEO PRESENTACIÓN</span>
+                                <button class="boton-contacto"> </button>
+                            </div>
+                            <div id="imag-logo-phone">
+                                <a href="index.html" ><img src="images/logo.png" id="imagen-logo-phone"></a>
+                            </div>
+                            <div id="buscador-phone" align="center">
+                                <input class="search-input" placeholder="Buscar" /> <button class="boton-lupa"> </button>
+                            </div>
+
+                        </div>
+
+                        <div id="buscar-ficha">
+                            <div id="buscador" align="right">
+                                <input class="search-input" placeholder="Buscar" /> <button class="boton-buscar">Buscar</button>
+                            </div>
+                        </div>
+                        <h2 class="ficha-titulo">BUSQUEDA</h2>
+                        <div id="resultado-busqueda"></div> 
+                        <div id="busqueda-temporal" style="display:none;"></div>
+                    </div><!-- #content-->
+                </div><!-- #container-->
+
+            </section><!-- #middle-->
+            <footer id="footer-ficha">
+                <span class="biogen-elan"></span>
+                <div class="footer-barra"></div>
+                <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
+                <a class="footer-text" href="creditos.html"><b>Créditos</b> </a>
+                <a class="footer-text" href="contacto.html"><b>Contactanos</b></a>
+            </footer>
+        </div><!-- fin del wrapper -->
+        <div id="cargando" align="center" style="display:none;"><br /><br /><br /><br /><img src="images/loading.gif" style="width:3%;"/></div>
+    </body>
+
+</html>

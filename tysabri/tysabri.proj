@@ -32,6 +32,8 @@
     <Folder Include="App_Resources\Android\drawable-nodpi">
       <Platform>Android</Platform>
     </Folder>
+    <Folder Include="css" />
+    <Folder Include="images" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="App_Resources\iOS\icon.png" />
@@ -54,14 +56,40 @@
     <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
-    <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="busqueda.html" />
+    <Content Include="contacto.html" />
+    <Content Include="creditos.html" />
+    <Content Include="css\phone.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\tablets.css" />
+    <Content Include="ficha.html" />
+    <Content Include="images\arrows.png" />
+    <Content Include="images\biogen-elan.png" />
+    <Content Include="images\boton-play.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\fondo.jpg" />
+    <Content Include="images\fondo_smartphone.jpg" />
+    <Content Include="images\fondo_tablet.jpg" />
+    <Content Include="images\ico-info.png" />
+    <Content Include="images\ico-lupa.png" />
+    <Content Include="images\ico-redes-sociales.png" />
+    <Content Include="images\inicio.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\logo-fb.png" />
+    <Content Include="images\logo-google.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\lupa.png" />
+    <Content Include="images\mas-menos.png" />
+    <Content Include="images\modal-gloss.png" />
+    <Content Include="images\raya.png" />
+    <Content Include="images\top.png" />
     <Content Include="index.html" />
-    <Content Include="css\index.css" />
+    <Content Include="js\datos-base.js" />
+    <Content Include="js\funciones.js" />
+    <Content Include="js\highlight.js" />
     <Content Include="js\index.js" />
-    <Content Include="img\logo.png" />
-    <Content Include="img\cordova.png" />
     <Content Include="cordova.ios.js">
       <Platform>iOS</Platform>
       <TargetName>cordova.js</TargetName>
@@ -70,6 +98,10 @@
       <Platform>Android</Platform>
       <TargetName>cordova.js</TargetName>
     </Content>
+    <Content Include="js\jquery.accordion.source.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\selectivizr-min.js" />
+    <Content Include="legal.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>
