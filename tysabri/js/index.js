@@ -35,5 +35,8 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         navigator.splashscreen.hide();
+
     }
 };
+
+

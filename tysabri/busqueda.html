@@ -44,7 +44,9 @@
                            
                            
                 $('a[href*="ficha"]').click(function(){
-                   console.log('hola'); 
+                    var id = $(this).data('seccion');
+                    localStorage.setItem("apartado-abierto", id);
+                    window.location = "ficha.html";
                 });
 
             });

@@ -348,11 +348,11 @@ html, body{
     width: 100%;
 }
 
-.accordion li.active > div { 
+.accordion li.active > div,.accordion li > div { 
     width: 96%;
     display: block;
     text-align: justify;
-    margin: 2% 0% 2% 2%;
+    margin: 0% 0% 2% 2%;
 }
 
 /*para uso de listas ordenadas y no ordenadas en el accordion */
@@ -812,7 +812,50 @@ a.resultado-titulo{
     margin-left: 5%;
 }
 
-/******************************************************************************/
+span.enlace{
+     color: blue;
+    cursor:pointer;
+    }
+/*********************BARRA SOCIAL***********************************************/
+.barra-social{
+    position: absolute;
+top: 5%;
+left: 18.5%;
+width: 85%;
+}
+
+.barra-social .izquierda{
+  float: left;
+margin: 0;
+padding: 0;
+position: absolute
+}
+
+.barra-social .derecha{
+
+position: absolute;
+right: 24%;
+}
+
+.icon-imprimir{
+   width: 28px;
+}
+
+.icon-correo{
+    width: 34px;
+}
+
+.barra-social .derecha > img {
+    margin-left: 10px;
+}
+
+.icon-google-plus{
+ width: 32px;   
+}
+
+.icon-facebook-like{
+    
+}
 
 @media only screen
 and (min-width : 361px)

@@ -30,9 +30,6 @@ $(document).ready(function() {
         }
     }
 
-
-
-
 });
 
 //Retorna true o false si hay internet.
@@ -268,7 +265,7 @@ function cargarContenido(abrir) {
     var apartadoAbierto = abrir;
     $('a[href=#' + apartadoAbierto + ']').click();
     setTimeout(function() {
-        $('body').animate({scrollTop: $('a[href=#' + apartadoAbierto + ']').offset().top}, 500);
+        $("body,html,document").animate({scrollTop: $('a[href=#' + apartadoAbierto + ']').offset().top}, 500);
     }, 500);
 
 
@@ -307,7 +304,7 @@ function cargarContenido(abrir) {
         }
 
         setTimeout(function() {
-            $('body').animate({scrollTop: $('a[href=#' + id[1] + ']').offset().top}, 500);
+            $("body,html,document").animate({scrollTop: $('a[href=#' + id[1] + ']').offset().top}, 500);
         }, 500);
 
     });

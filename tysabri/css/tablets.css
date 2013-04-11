@@ -319,7 +319,7 @@ and (orientation : landscape) {
         height: 5px;
         position: absolute;
         z-index: 0;
-        margin-top: 34%;
+        margin-top: 38%;
         width: 76%;
     }
 
@@ -407,7 +407,30 @@ and (orientation : landscape) {
     #dialog-2 div.disclaimer {
         margin-top: 12%;
     }
-    /******************************************************************************/
+    /****************************BARRA SOCIAL**********************************/
+    .barra-social{
+        left: 15.5%;
+    }
+
+    .derecha{
+        right: 10.5% !important;
+    }
+
+     .icon-imprimir{
+        width: 33px;
+    }
+    
+    .icon-correo{
+       width: 39px;
+    }
+    
+    .icon-google-plus{
+        width: 42px;
+    }
+
+    .icon-facebook-like{
+       width: 90px;
+    }
 
 }
 
@@ -716,7 +739,7 @@ and (orientation : portrait){
     }
 
     .header-barra-index {
-        margin-top: 28%;
+        margin-top: 27%;
         width: 80%;
     }
 
@@ -762,6 +785,39 @@ margin-top: 0%;
     {
         margin-right: 24%;
     }
-    /******************************************************************************/
+   /****************************BARRA SOCIAL**********************************/
+    .barra-social{
+        left: 8.5%;
+        top: 6%;
+        width: 80%;
+    }
+
+    .derecha{
+        right: 0.5% !important;
+    }
+
+    .icon-google-play {
+       width: 75.9375px;
+    }
+
+    .icon-app-store {
+        width: 82.453125px;
+    }
+
+    .icon-imprimir{
+        width: 24px;
+    }
+
+    .icon-correo{
+        width: 30px;
+    }
+
+    .icon-google-plus{
+        width: 33px;
+    }
+
+    .icon-facebook-like{
+        width: 72px;
+    }
 
 }

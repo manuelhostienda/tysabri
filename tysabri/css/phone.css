@@ -537,5 +537,14 @@
     .MsoNormalTable{
     margin-left: 0%;
 }
+    
+        #resultado-busqueda{
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .barra-social{
+        display:none;
+    }
 
 }

@@ -4,12 +4,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/tablets.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/phone.css" />
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=130225993833651";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
          <div id="boxes-1">
             <!-- #customize your modal window here -->
             <div id="dialog-1" align="center" class="window">
@@ -43,7 +53,7 @@
                 <div class="ayuda" style="display:none; color:red; font-family:helvetica">Contraseña incorrecta!.</div>
                 <div id="no-2" class="boton-no">CANCELAR</div><div id="si-2" class="boton-si">CONTINUAR</div>
                 <div class="disclaimer">
-                    Si no dispone del código, puede obtenerlo en <a href="http://www.biogenidec.es">www.biogenidec.es</a>
+                    Si no dispone del código, puede obtenerlo en <span class="enlace">www.biogenidec.es</span>
                 </div>
             </div>
             <!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
@@ -53,6 +63,20 @@
         <div id="wrapper">
 
             <header id="header">
+                <div class="barra-social">
+                    <div class="izquierda">
+                        <img class="icon-google-play" src="images/google-play.png" />
+                        <img class="icon-app-store" src="images/app-store.png" />
+                    </div>
+                    <div class="derecha" align="right">
+
+                        <img class="icon-imprimir" src="images/imprimir.png"/> 
+                        <img class="icon-correo" src="images/correo.png" /> 
+                        <img class="icon-google-plus" src="images/google-plus.png"/>
+                        <img class="icon-facebook-like" src="images/facebook-like.png"/>
+                        
+                    </div>
+                </div>
                 <img  src="images/top.png" />
             </header><!-- #header-->
             <section id="middle">
@@ -155,9 +179,9 @@
                         <div id="myModal" class="reveal-modal">
                             <table id="tablemodal" width="100%">
                                 <tr>
-                                    <td style="text-align: center;"> <a href="http://www.facebook.com" class="" style="text-decoration: none;"> <img src="images/logo-fb.png" id="logo-fb" class="" /> <br> <span class="ModalText">Facebook</span></a> </td>
-                                    <td style="text-align: center;"> <a href="https://plus.google.com" class="" style="text-decoration: none; margin-left: 5%;"> <img src="images/logo-google.png" id="logo-google" class="" /> <br> <span class="ModalText" style="margin-left: 5%;">Google+</span></a> </td>
-                                </tr>
+                                     <td style="text-align: center;"> <div id="plus-one-phone"><div class="g-plusone" data-annotation="none"></div></div></td>
+                                    <td style="text-align: center;"> <div class="fb-like" data-href="http://www.tysabri.com" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div></td>
+                               </tr>
                             </table>
                         </div>
 
@@ -185,14 +209,16 @@
             </section><!-- #middle-->
 
         </div><!-- fin del wrapper -->
-    <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/funciones.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.reveal.js"></script>
+        <script type="text/javascript" src="Plugins/Child Browser/childbrowser.js"></script>                            
         <script type="text/javascript">
             app.initialize();
             $(document).ready(function() {
-
+               
                 //select all the a tag with name equal to modal
                 $('a[name=modal-1]').click(function(e) {
                     //Cancel the link behavior
@@ -306,7 +332,8 @@
                     clave = $('#passwd').val() + "";
                     if (clave.toUpperCase() == "TYSABRI13") {
                         e.preventDefault();
-                        $('#mask-2, .window').hide();
+                        localStorage.setItem("autenticado","si");
+                        $('#mask-2, .window').hide();                     
                     } else {
                         $(".ayuda").css("display", "block");
                     }
@@ -315,16 +342,55 @@
                 $("#passwd").keypress(function(e) {
                     if (e.which == 13) {
                         $('#si-2').click();
+                        localStorage.setItem("autenticado","si");
                     }
                 });
                 
                 var autenticado=localStorage.getItem("autenticado");
+                
                 if (autenticado!="si" || autenticado==null){
                     setTimeout(function() {
                         $('a[name=modal-1]').trigger('click');
                     },100);
                 }
+                
+                $(".enlace").click(function(){
+                   window.open('http://www.biogenidec.es', '_system');
+                });
+                
+                           $('#myButton').click(function(e) {
+                    e.preventDefault();
+
+                    $('#myModal').reveal();
+
+
+                });
+                /*************GOOGLE PLUS**************************************/
+                window.___gcfg = {lang: 'es'};
+
+                (function() {
+                    var po = document.createElement('script');
+                    po.type = 'text/javascript';
+                    po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(po, s);
+                })();
+
+ $("#plus-one-phone").css("display","none");
+
+                
+                $('.icon-google-plus').click(function(){
+                   window.plugins.childBrowser.showWebPage("https://plus.google.com/share?url='http://google.co.ve"); 
+                });
+                
+                   $('.icon-facebook-like').click(function(){
+                   window.plugins.childBrowser.showWebPage("https://plus.google.com/share?url='http://google.co.ve"); 
+                });
+                
+ 
             });
+            
  </script>
     </body>
 </html>

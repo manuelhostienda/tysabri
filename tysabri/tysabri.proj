@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>d147a60b-1f3d-48eb-ab77-cf4160fe03a3</ProjectGuid>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-    <AppIdentifier>com.telerik.tysabri</AppIdentifier>
+    <AppIdentifier>com.mederic.tysabri</AppIdentifier>
     <ProjectName>tysabri</ProjectName>
     <IsRunnable>true</IsRunnable>
     <TemplateAppName>Cordova240</TemplateAppName>
@@ -11,6 +11,10 @@
     <DeviceOrientations>Portrait;Landscape</DeviceOrientations>
     <iOSStatusBarStyle>Default</iOSStatusBarStyle>
     <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
+    <BundleVersion>1.0</BundleVersion>
+    <iOSDisplayName />
+    <iOSDeviceFamily>1;2</iOSDeviceFamily>
+    <AndroidVersionCode>1</AndroidVersionCode>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="App_Resources" />
@@ -65,20 +69,24 @@
     <Content Include="css\style.css" />
     <Content Include="css\tablets.css" />
     <Content Include="ficha.html" />
+    <Content Include="images\app-store.png" />
     <Content Include="images\arrows.png" />
     <Content Include="images\biogen-elan.png" />
     <Content Include="images\boton-play.png" />
+    <Content Include="images\correo.png" />
+    <Content Include="images\facebook-like.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\fondo.jpg" />
     <Content Include="images\fondo_smartphone.jpg" />
     <Content Include="images\fondo_tablet.jpg" />
+    <Content Include="images\google-play.png" />
+    <Content Include="images\google-plus.png" />
     <Content Include="images\ico-info.png" />
     <Content Include="images\ico-lupa.png" />
     <Content Include="images\ico-redes-sociales.png" />
+    <Content Include="images\imprimir.png" />
     <Content Include="images\inicio.png" />
     <Content Include="images\loading.gif" />
-    <Content Include="images\logo-fb.png" />
-    <Content Include="images\logo-google.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\lupa.png" />
     <Content Include="images\mas-menos.png" />
@@ -100,8 +108,17 @@
     </Content>
     <Content Include="js\jquery.accordion.source.js" />
     <Content Include="js\jquery.js" />
-    <Content Include="js\selectivizr-min.js" />
+    <Content Include="js\jquery.reveal.js" />
     <Content Include="legal.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <CordovaPlugin Include="com.phonegap.plugins.childbrowser">
+      <Version>4.1.0</Version>
+      <Name>Child Browser</Name>
+    </CordovaPlugin>
+  </ItemGroup>
+  <ItemGroup>
+    <CordovaPluginContent Include="com.phonegap.plugins.childbrowser\childbrowser.js" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>
