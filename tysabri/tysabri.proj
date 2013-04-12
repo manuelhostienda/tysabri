@@ -111,14 +111,5 @@
     <Content Include="js\jquery.reveal.js" />
     <Content Include="legal.html" />
   </ItemGroup>
-  <ItemGroup>
-    <CordovaPlugin Include="com.phonegap.plugins.childbrowser">
-      <Version>4.1.0</Version>
-      <Name>Child Browser</Name>
-    </CordovaPlugin>
-  </ItemGroup>
-  <ItemGroup>
-    <CordovaPluginContent Include="com.phonegap.plugins.childbrowser\childbrowser.js" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>

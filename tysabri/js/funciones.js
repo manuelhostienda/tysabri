@@ -72,9 +72,7 @@ function descargarLibro() {
 
         },
         success: function(response) {
-            var abrir = localStorage.getItem("apartado-abierto");
             guardarLibro(response);
-            cargarContenido(abrir);
             $('#wrapper').css("display", "block");
             $('#cargando').css("display", "none");
 
@@ -94,7 +92,6 @@ function descargarLibro() {
 function guardarLibro(response) {
 
     var versionActual = localStorage.getItem("version");
-
     if (versionActual < response.version) {
         eliminarLibro();
         localStorage.setItem("version", response.version);
