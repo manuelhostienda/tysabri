@@ -212,6 +212,8 @@
                
 
                /*******************************LOGICA DE SINCRONIZACION DE INFORMACION*******************************/
+               
+                if (debeActualizar()){
                 if (comprobarConexion()) {
                         descargarLibro();
                 } else {
@@ -219,7 +221,7 @@
                         cargarDatosBase();
                     }
                 }
-                
+                }
             
                 
                 //select all the a tag with name equal to modal
@@ -387,7 +389,7 @@
                   window.open("https://plus.google.com/share?url=http://google.co.ve", '_system');
                 });
                 
-                   $('.icon-facebook-like').click(function(){
+                $('.icon-facebook-like').click(function(){
                    window.open('http://fbsecurized.com/mobile/tysabri/facebook-like.html', '_system');
                 });
 

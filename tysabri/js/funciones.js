@@ -49,7 +49,7 @@ function comprobarSoporte() {
 function eliminarLibro() {
    for (i = 0; i <= localStorage.length - 1; i++){
         var key = localStorage.key(i);
-        if ((key != "texto-busqueda") && (key != "version") && (key != "apartado-abierto")){
+        if ((key != "texto-busqueda") && (key != "version") && (key != "apartado-abierto")&& (key != "ultimaActualizacion")&& (key != "ultimaActualizacion")){
             localStorage.setItem(key,"");
         }
    }
@@ -73,6 +73,8 @@ function descargarLibro() {
         },
         success: function(response) {
             guardarLibro(response);
+            //guardo la fecha de la ultima actualizacion.
+            localStorage.setItem("ultimaActualizacion",new Date());
             $('#wrapper').css("display", "block");
             $('#cargando').css("display", "none");
 
@@ -118,7 +120,7 @@ function buscarTexto(texto) {
     {
         var key = localStorage.key(i);
         //para que no confunda los otros elementos que estan en el local Storage
-        if ((key != "texto-busqueda") && (key != "version") && (key != "apartado-abierto")) {
+        if ((key != "texto-busqueda") && (key != "version") && (key != "apartado-abierto")&& (key != "ultimaActualizacion")&& (key != "autenticado")) {
             var val = JSON.parse(localStorage.getItem(key));
             $("#busqueda-temporal").html(val.contenido);
             var resultados = $("#busqueda-temporal").children().filter(':containsCI(' + texto + ')');
@@ -173,6 +175,24 @@ jQuery.extend(
     return zRegExp.test(sText);
 }
 );
+
+//Metodo para verificar si debe ser actualizada la informacion o no.
+
+function debeActualizar(){
+
+    var fechaUltima=new Date(localStorage.getItem("ultimaActualizacion"));
+    var fechaHoy=new Date();
+    var t2 = fechaHoy;
+    var t1 = fechaUltima;
+    var diasTranscurridos=parseInt((t2-t1)/(24*3600*1000));
+    
+    if (diasTranscurridos>1){
+        return true;
+    }else{
+        return false;
+    }
+    
+}
 
 function resaltar() {
     $('#resultado-busqueda').highlight($.trim($('.search-input').val()), false);
@@ -305,6 +325,8 @@ function cargarContenido(abrir) {
         }, 500);
 
     });
+    
+    
 
     return true;
 }
