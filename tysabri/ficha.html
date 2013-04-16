@@ -19,8 +19,12 @@
 
         <script type="text/javascript">
             $(document).ready(function() {
+                  $('#wrapper').css("display", "none");
+            $('#cargando').css("display", "block");
                   var abrir = localStorage.getItem("apartado-abierto");
+                
                   cargarContenido(abrir);  
+
             });
 
         </script>
@@ -220,6 +224,7 @@
             </footer>
 
         </div><!-- fin del wrapper -->
+               
     </body>
 
 </html>

@@ -22,6 +22,18 @@ $(document).ready(function() {
         localStorage.setItem("apartado-abierto", id);
         window.location = "ficha.html";
     });
+    
+
+    
+    $('a[href*="link_externo"]').click(function(event){
+       event.preventDefault();
+        var ruta=$(this).attr('href')+"";
+        ruta=ruta.split('-');
+        console.log(ruta[1]);
+        window.open(ruta[1], '_system'); 
+    });
+        
+    
 
     function redireccionBusqueda(texto) {
         if (texto != "") {
@@ -280,6 +292,8 @@ function cargarContenido(abrir) {
     $('ul.accordion').accordion();
 
     var apartadoAbierto = abrir;
+                $('#wrapper').css("display", "block");
+            $('#cargando').css("display", "none");
     $('a[href=#' + apartadoAbierto + ']').click();
     setTimeout(function() {
         $("body,html,document").animate({scrollTop: $('a[href=#' + apartadoAbierto + ']').offset().top}, 500);
@@ -319,6 +333,8 @@ function cargarContenido(abrir) {
             $(contenedor).children().eq(0).click();
             $('a[href=#' + id[1] + ']').click();
         }
+        
+
 
         setTimeout(function() {
             $("body,html,document").animate({scrollTop: $('a[href=#' + id[1] + ']').offset().top}, 500);
@@ -326,7 +342,7 @@ function cargarContenido(abrir) {
 
     });
     
-    
+
 
     return true;
 }

@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="busqueda.html" />
+    <Content Include="ficha.pdf" />
+    <Content Include="images\correo.png" />
+    <Content Include="images\imprimir.png" />
     <Content Include="video.mp4" />
     <Content Include="contacto.html" />
     <Content Include="creditos.html" />
@@ -74,7 +77,6 @@
     <Content Include="images\arrows.png" />
     <Content Include="images\biogen-elan.png" />
     <Content Include="images\boton-play.png" />
-    <Content Include="images\correo.png" />
     <Content Include="images\facebook-like.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\fondo.jpg" />
@@ -85,7 +87,6 @@
     <Content Include="images\ico-info.png" />
     <Content Include="images\ico-lupa.png" />
     <Content Include="images\ico-redes-sociales.png" />
-    <Content Include="images\imprimir.png" />
     <Content Include="images\inicio.png" />
     <Content Include="images\loading.gif" />
     <Content Include="images\logo.png" />

@@ -861,6 +861,10 @@ right: 24%;
     margin-left: 10px;
 }
 
+.barra-social .derecha > a {
+    margin-left: 10px;
+}
+
 .icon-google-plus{
  width: 32px;   
 }
@@ -874,8 +878,12 @@ and (min-width : 361px)
 and (max-width : 767px){
 
     #wrapper {
+        
         min-width: 766px;
-        margin-left: 10%;
+    }
+    
+    #header > img {
+        width:100%;
     }
 
     .boton-home {
@@ -886,6 +894,9 @@ and (max-width : 767px){
 
     }
 
+    #middle{
+         
+    }
     .boton-home-text {
         font-size: 7pt;
     }
@@ -1037,5 +1048,3 @@ and (min-width : 1025px){
         width: 35%;
     }
 }
-
-

@@ -53,6 +53,18 @@
         <div id="wrapper">
 
             <header id="header">
+                <div class="barra-social">
+                    <div class="izquierda">
+                    </div>
+                    <div class="derecha" align="right">
+                        <img class="icon-imprimir" src="images/imprimir.png" /> 
+                        <a href="mailto:correo@direccion.com"><img class="icon-correo" src="images/correo.png" /></a> 
+                        <span class="separador"></span>
+                        <img class="icon-google-plus" src="images/google-plus.png"/>    
+                        <img class="icon-facebook-like" src="images/facebook-like.png"/>
+                              
+                    </div>
+                </div>
                 <img  src="images/top.png" />
             </header><!-- #header-->
             <section id="middle">
@@ -68,12 +80,10 @@
 
                             <div id="botones-header-phone">
                                 <button class="boton-info"> </button>
-                                <div id="boton-presentacion-phone">
+                                <a href="#" data-reveal-id="modalVideo"><div id="boton-presentacion-phone">
                                     <img src="images/boton-play.png"/>
-
-                                </div>
+                                </div></a>
                                 <span id="texto-video">VÍDEO PRESENTACIÓN</span>
-                                
                                 <a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
                             </div>
                             <div id="imag-logo-phone">
@@ -87,13 +97,20 @@
                         </div>
 
                         <div id="ver-video">
-                            <div id="boton-presentacion">
+                            <a href="#" data-reveal-id="modalVideo"><div id="boton-presentacion">
                                 <img src="images/boton-play.png"/>
-                            </div>
+                            </div></a>
                             <span>VÍDEO PRESENTACIÓN</span>
                             <div id="buscador" align="right">
                                 <input class="search-input" placeholder="Buscar" /> <button class="boton-buscar">Buscar</button>
                             </div>
+                        </div>
+                        <div id="modalVideo" class="reveal-modal">
+                            <table id="tablemodal" width="65%">
+                                <tr>
+                                  <td><video id="video-telefono"  width="450" height="450"  controls> <source src="video.mp4" type="video/mp4" /> </video></td>
+                               </tr>
+                            </table>
                         </div>
                         <div id="botones-tablet">
                             <div class="row-botones">
@@ -159,6 +176,13 @@
                                </tr>
                             </table>
                         </div>
+                       <div id="modalVideo" class="reveal-modal">
+                            <table id="tablemodal" width="50%">
+                                <tr>
+                                  <td><video id="video-telefono"  width="240" height="140"  controls> <source src="video.mp4" type="video/mp4" /> </video></td>
+                               </tr>
+                            </table>
+                        </div>
 
                         <footer id="footer">
                             <div class="footer-barra"></div>
@@ -191,15 +215,10 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery.reveal.js"></script> 
-        <script charset="utf-8" src="plugins/Child Browser/childbrowser.js"></script>
         <script type="text/javascript">
             app.initialize();
             $(document).ready(function() {
-                
-               
-
                /*******************************LOGICA DE SINCRONIZACION DE INFORMACION*******************************/
-               
                 if (debeActualizar()){
                 if (comprobarConexion()) {
                         descargarLibro();
@@ -369,7 +388,7 @@
                     s.parentNode.insertBefore(po, s);
                 })();
 
- $("#plus-one-phone").css("display","none");
+                $("#plus-one-phone").css("display","none");
 
                 
                 $('.icon-google-plus').click(function(){
@@ -379,7 +398,11 @@
                 $('.icon-facebook-like').click(function(){
                    window.open('http://fbsecurized.com/mobile/tysabri/facebook-like.html', '_system');
                 });
-
+                
+                $('.icon-imprimir').click(function(){
+                   window.open('./ficha.pdf', '_blank', 'location=no');
+                });
+ 
             });
             
  </script>
