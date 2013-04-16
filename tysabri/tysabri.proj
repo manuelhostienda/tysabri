@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="busqueda.html" />
+    <Content Include="video.mp4" />
     <Content Include="contacto.html" />
     <Content Include="creditos.html" />
     <Content Include="css\phone.css" />
