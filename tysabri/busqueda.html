@@ -43,9 +43,10 @@
                            });
                            
                            
-                $('a[href*="ficha"]').click(function(){
+                $('a[href*="ficha"]').click(function() {
                     var id = $(this).data('seccion');
-                    localStorage.setItem("apartado-abierto", id);
+
+                    localStorage.setItem("apartado-abierto-busqueda", id);
                     window.location = "ficha.html";
                 });
 

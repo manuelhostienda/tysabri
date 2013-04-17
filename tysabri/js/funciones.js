@@ -61,7 +61,7 @@ function comprobarSoporte() {
 function eliminarLibro() {
    for (i = 0; i <= localStorage.length - 1; i++){
         var key = localStorage.key(i);
-        if ((key != "texto-busqueda") && (key != "version") && (key != "apartado-abierto")&& (key != "ultimaActualizacion")&& (key != "ultimaActualizacion")){
+        if ((key != "texto-busqueda") && (key != "version") && (key != "apartado-abierto")&& (key != "ultimaActualizacion")&& (key != "apartado-abierto-busqueda")&& (key != "autenticado")){
             localStorage.setItem(key,"");
         }
    }
@@ -96,7 +96,7 @@ function descargarLibro() {
                 alert('error de tiempo de espera');
             }
             else {
-                alert('error :' + error.toString());
+                alert('error : error conectando al servidor');
             }
         }
     });
@@ -132,7 +132,7 @@ function buscarTexto(texto) {
     {
         var key = localStorage.key(i);
         //para que no confunda los otros elementos que estan en el local Storage
-        if ((key != "texto-busqueda") && (key != "version") && (key != "apartado-abierto")&& (key != "ultimaActualizacion")&& (key != "autenticado")) {
+        if ((key != "texto-busqueda") && (key != "version") && (key != "apartado-abierto")&& (key != "ultimaActualizacion")&& (key != "autenticado") && (key != "apartado-abierto-busqueda")) {
             var val = JSON.parse(localStorage.getItem(key));
             $("#busqueda-temporal").html(val.contenido);
             var resultados = $("#busqueda-temporal").children().filter(':containsCI(' + texto + ')');
@@ -290,7 +290,7 @@ function cargarContenido(abrir) {
     $('a[href="#4-3"]').next().html(getSeccion('4.3').contenido + footer);
 
     $('ul.accordion').accordion();
-
+  if (abrir != "") {
     var apartadoAbierto = abrir;
                 $('#wrapper').css("display", "block");
             $('#cargando').css("display", "none");
@@ -298,8 +298,29 @@ function cargarContenido(abrir) {
     setTimeout(function() {
         $("body,html,document").animate({scrollTop: $('a[href=#' + apartadoAbierto + ']').offset().top}, 500);
     }, 500);
-
-
+         localStorage.setItem('apartado-abierto', "");
+} else {
+        var apartadoAbierto = localStorage.getItem('apartado-abierto-busqueda') + "";
+        var click = apartadoAbierto.split('-');
+     if (click.length ==2){
+        $('a[href=#' + click[0] + ']').click();
+        $('a[href=#' + click[0] + '-' + click[1] + ']').click();
+        setTimeout(function() {
+            console.log('a[href=#' + click[0] + '-' + click[1] + ']');
+            $("body,html,document").animate({scrollTop: $('a[href=#' + click[0] + '-' + click[1] + ']').offset().top}, 500);
+        }, 500);
+        
+    } else{
+          $('a[href=#' + click[0] + ']').click();
+        setTimeout(function() {
+            console.log('a[href=#' + click[0] + '-' + click[1] + ']');
+            $("body,html,document").animate({scrollTop: $('a[href=#' + click[0]+ ']').offset().top}, 500);
+        }, 500);  
+    
+    }
+    
+     localStorage.setItem('apartado-abierto-busqueda',"");    
+}
     $('a[href*="#link"]').click(function() {
         contenedor = $(this).closest('li');
 
