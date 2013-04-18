@@ -270,7 +270,7 @@ and (orientation : landscape) {
         height: 40px;
         background: transparent url(../images/biogen-elan.png);
         top: 30%;
-        left: 72%;
+        left: 75%;
         position: absolute;
     }
 
@@ -282,7 +282,7 @@ and (orientation : landscape) {
         padding: 0% 0% 0% 0%;
         text-indent: -1.7em;
         margin-left: 1.7em;
-        max-width: 93%;
+        max-width: 92%;
     }
 
     .logo-tablet{

@@ -92,7 +92,7 @@ html, body{
     width:65%;
     position:absolute;
     bottom: 1%;
-    left: 18.5%;
+    left: 5.5%;
     text-align: center;
     height: 100px;
 }
@@ -315,7 +315,7 @@ html, body{
     text-shadow: rgba(0,0,0,.75) 1px 2px 1px;
     text-transform: uppercase;
     padding: 0;
-    margin: 20px 0 15px 0;
+    margin: 2em 0px 15px 0em;
     font-size: 1.8em;
 }
 
@@ -879,7 +879,8 @@ and (max-width : 767px){
 
     #wrapper {
         
-        min-width: 766px;
+        min-width: 760px;
+         
     }
     
     #header > img {
@@ -888,15 +889,32 @@ and (max-width : 767px){
 
     .boton-home {
         padding: 2% 0% 11% 0%;
-        margin: 1% 2% 1%;
+        margin: 1% 2.5% 1%;
         width: 30%;
         height: 3.5em;
 
     }
 
-    #middle{
-         
+        #main-img {
+        width: 76%;
     }
+
+    #footer{
+        width: 76.5%;
+    }
+    #content{
+        width: 100%;
+    }
+
+    .header-barra-index{
+        margin-top: 31%;
+        width: 76%;
+    }
+
+    #container{
+        padding-left: 10%;
+    }
+    
     .boton-home-text {
         font-size: 7pt;
     }
@@ -907,7 +925,7 @@ and (max-width : 767px){
         height: 40px;
         background: transparent url(../images/biogen-elan.png);
         top: 20%;
-        left: 68%;
+        left: 72%;
         position: absolute;
     }
 
@@ -1018,6 +1036,10 @@ and (max-width : 767px){
         left: 5%;
     }
     
+    .barra-social .derecha{
+        right: 5%;
+    }
+    
     .icon-google-play{
         width: 90px;
         
@@ -1031,6 +1053,10 @@ and (max-width : 767px){
     .icon-facebook-like{
         width: 75px;
     }
+    
+    .icon-imprimir {
+width: 24px;
+}
     
     
 }

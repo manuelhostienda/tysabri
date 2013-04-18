@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>d147a60b-1f3d-48eb-ab77-cf4160fe03a3</ProjectGuid>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-    <AppIdentifier>com.mederic.tysabri</AppIdentifier>
+    <AppIdentifier>com.medericediciones.tysabri</AppIdentifier>
     <ProjectName>tysabri</ProjectName>
     <IsRunnable>true</IsRunnable>
     <TemplateAppName>Cordova240</TemplateAppName>
@@ -112,6 +112,15 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.reveal.js" />
     <Content Include="legal.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <CordovaPlugin Include="com.phonegap.plugins.childbrowser">
+      <Version>4.1.0</Version>
+      <Name>Child Browser</Name>
+    </CordovaPlugin>
+  </ItemGroup>
+  <ItemGroup>
+    <CordovaPluginContent Include="com.phonegap.plugins.childbrowser\childbrowser.js" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>

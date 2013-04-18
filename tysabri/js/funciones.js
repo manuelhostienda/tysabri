@@ -41,6 +41,8 @@ $(document).ready(function() {
             window.location = "busqueda.html";
         }
     }
+    
+
 
 });
 
@@ -367,3 +369,7 @@ function cargarContenido(abrir) {
 
     return true;
 }
+
+
+
+
