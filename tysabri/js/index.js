@@ -33,22 +33,6 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-
-        
-
-        
-    }
+       
+    }  
 };
-
-
-function Application() {
-
-}
-
-Application.prototype.Run = function() {
-        alert("Si no puedes ver el pdf es porque no tienes un visor de pdf instalado.");
-       var path = window.location.href.replace('index.html', '')+"ficha.pdf";;
-		
-		window.plugins.childBrowser.openExternal(path);
-
-}

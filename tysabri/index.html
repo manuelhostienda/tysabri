@@ -213,12 +213,11 @@
         <script type="text/javascript" src="js/funciones.js"></script>
         <script type="text/javascript" src="js/datos-base.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="Plugins/Child Browser/childbrowser.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery.reveal.js"></script>
 
         <script type="text/javascript">
-    
+          app.initialize();
             $(document).ready(function() {
                /*******************************LOGICA DE SINCRONIZACION DE INFORMACION*******************************/
                 if (debeActualizar()){
@@ -388,18 +387,17 @@
                    window.open('http://fbsecurized.com/mobile/tysabri/facebook-like.html', '_system');
                 });
                 
-                 $('.icon-imprimir').click(function(){
+             $('.icon-imprimir').click(function(){
                   
                 if (device.platform === 'Android') {
-                    var app = new Application();
-		            app.Run();
+                     alert("Si no puedes ver el pdf es porque no tienes un visor de pdf instalado.");
+                     window.open('ficha.pdf', '_system', 'location=no');
 	            } else {
 	            	window.open('./ficha.pdf', '_blank', 'location=no');
 	            } 
                 
             });
         
-
     });      
  </script>
     </body>
