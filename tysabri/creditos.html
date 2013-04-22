@@ -1,102 +1,171 @@
 <!DOCTYPE html>
 <html>
 
-    <head >
-        <meta charset="utf-8" />
-        <title>.: Tysabri :.</title>
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-        <!-- FAVICON -->
-        <link rel="shortcut icon" href="images/favico.ico" />
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/tablets.css" />
-        <link rel="stylesheet" type="text/css" href="css/phone.css" />
-        <!-- JS -->
-        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-        <!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
-         <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/funciones.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('#myButton').click(function(e) {
-                    e.preventDefault();
-                    $('#myModal').reveal();
-                });
-            });
-        </script>
+	<head >
+		<meta charset="utf-8" />
+		<title>.: Tysabri :.</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="images/favico.ico" />
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/tablets.css" />
+		<link rel="stylesheet" type="text/css" href="css/phone.css" />
+		<!-- JS -->
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/funciones.js"></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#myButton').click(function(e) {
+					e.preventDefault();
+					$('#myModal').reveal();
+				});
+			});
+		</script>
 
-    </head>
-    <body>
-        <div id="wrapper">
+	</head>
+	<body>
+		<div id="wrapper">
 
-            <header id="header">
-                <img  src="images/top.png"/>
-            </header><!-- #header-->
-            <section id="middle">
+			<header id="header">
+				<img  src="images/top.png"/>
+			</header><!-- #header-->
+			<section id="middle">
 
-                <div id="container">
-                    <aside id="sideLeft">
-                        <a href="index.html" ><img src="images/logo.png" id="logo-side" /></a>
-                    </aside><!-- #sideLeft -->
-                    <div id="content">
+				<div id="container">
+					<aside id="sideLeft">
+						<a href="index.html" >
+							<img src="images/logo.png" id="logo-side" />
+						</a>
+					</aside><!-- #sideLeft -->
+					<div id="content">
 
-                        <div id="banner-phone">
-                            <div id="botones-header-phone">
-                                <button class="boton-info"> </button>
-                                
-                            </div>
-                            <div id="imag-logo-phone-apartados">
-                                <a href="index.html" ><img src="images/logo.png" id="imagen-logo-phone-apartados"></a>
-                            </div>
-                            <div id="buscador-phone" align="left">
-                                <input class="search-input-apartados" placeholder="Buscar" /> <button class="boton-lupa"> </button>
-                            </div>
-                        </div>
-                        <div id="buscar-ficha">
-                            <div id="buscador" align="right">
-                                <input class="search-input" placeholder="Buscar" /> <button class="boton-buscar">Buscar</button>
+						<div id="ver-video-phone">
+							<div id="botones-header-phone">
+								<a href="#" data-reveal-id="modalVideo">
+									<div id="boton-presentacion-phone">
+										<img src="images/boton-play.png"/>
+									</div>
+								</a>
+								<span id="texto-video">VÍDEO PRESENTACIÓN</span>
+								<a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
+							</div>
+							<div id="imag-logo-phone">
+								<img src="images/logo.png" id="imagen-logo-phone">
+							</div>
+							<div id="buscador-phone" align="center">
+								<input class="search-input" placeholder="Buscar" />
+								<button class="boton-lupa"> </button>
+								<div class="header-barra"></div>
+							</div>
 
-                            </div>
-                        </div>
-                        <div class="header-barra-mobile"></div>
+						</div>
+						<div id="buscar-ficha">
+							<div id="buscador" align="right">
+								<input class="search-input" placeholder="Buscar" />
+								<button class="boton-buscar">Buscar</button>
 
-                        <h2 class="ficha-titulo">CRÉDITOS</h2>
+							</div>
+						</div>
+						<div class="header-barra-mobile"></div>
+						<div id="modalVideo" class="reveal-modal">
+							<table id="tablemodal" width="65%">
+								<tr>
+									<td>
+										<video id="video-telefono"  width="250" height="180"  controls>
+											<source src="video.mp4" type="video/mp4" />
+										</video>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div id="myModal" class="reveal-modal">
+							<table id="tablemodal" width="100%">
+								<tr>
+									<td style="text-align: center;">
+										<img class="icon-imprimir" src="images/imprimir.png" />
+									</td>
+									<td style="text-align: center;">
+										<a href="mailto:direccion@correo.com?subject=Compartiendo%20Tysabri&reg;&body=Hola,%20quiero%20compartir%20contigo%20este%20enlace%20de%20acceso%20a%20la%20adaptación%20interactiva%20multiplataforma%20de%20la%20ficha%20técnica%20de%20Tysabri®%20desarrollada%20por%20Biogen%20Idec.">
+											<img class="icon-correo" src="images/correo.png" />
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">
+										<img class="icon-google-plus" src="images/google-plus.png"/>
+									</td>
+									<td style="text-align: center;">
+										<img class="icon-facebook-like" src="images/facebook-like.png"/>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<h2 class="ficha-titulo">CRÉDITOS</h2>
 
+						<div id="body-tablet-apartados">
+							<p class="creditos">
+								<b>Distribución exclusiva de BIOGEN IDEC SPAIN </b>
+							</p>
+							<p class="creditos">
+								<b>TY-SP-0021</b>
+							</p>
+							<p class="creditos">
+								<b><i>© 2013 MÉDERIC EDICIONES, S.L.</i></b>
+							</p>
+							<p class="creditos">
+								<i>(Para todos los idiomas. Diseño programación y arquitectura de la aplicación)<br>
+									CARRER DE MUNT, 41 08392 SANT ANDREU DE LLAVANERES <br>(ESPAÑA) <br>
+									<a href='link_externo-http://www.medericediciones.com'> www.medericediciones.com</a></i>
+							</p>
+						</div>
 
-                        <div id="body-tablet-apartados">
-                            <p class="creditos"><b>Distribución exclusiva de BIOGEN IDEC SPAIN </b></p>
-                            <p class="creditos"><b>TY-SP-0021</b></p>
-                            <p class="creditos"><b><i>© 2013 MÉDERIC EDICIONES, S.L.</i></b></p>
-                            <p class="creditos"><i>(Para todos los idiomas. Diseño programación y arquitectura de la aplicación)<br>
-                                    CARRER DE MUNT, 41 08392 SANT ANDREU DE LLAVANERES <br>(ESPAÑA) <br><a href='link_externo-http://www.medericediciones.com'>  www.medericediciones.com</a></i></p>
-                        </div>
+						<div id="body-phone-apartados" style="margin-bottom: 26%;">
+							<p class="contacto-parrafo-1">
+								Distribucaion exclusiva de <br/> BIOGEN IDEC SPAIN
+							</p>
+							<p  class="contacto-parrafo-2">TY-SP-0021</p>
+							<p  class="contacto-parrafo-3" style="margin-bottom: 0px;">© 2013 MÉDERIC EDICIONES, S.L.</p>
+							<p  class="contacto-parrafo-4">
+								(Para todos los idiomas. Diseño programación y arquitectura de la aplicación)<br>
+								CARRER DE MUNT, 41 08392 SANT ANDREU DE LLAVANERES <br>(ESPAÑA) <br>
+								<a href='link_externo-http://www.medericediciones.com'> www.medericediciones.com</a>
+							</p>
+						</div>
+						<!-- aqui va el modal de contacto -->
+						<footer id="footer">
+							<div class="footer-barra"></div>
+							<div id="footer-enlaces">
+								<a class="footer-text" href="legal.html">
+									<b>Aviso legal</b>
+								</a>
+								<a class="footer-text" href="creditos.html">
+									<b>Créditos </b>
+								</a>
+								<a class="footer-text" href="contacto.html">
+									<b>Contacto</b>
+								</a>
+							</div>
+							<div id="footer-enlaces-phone">
+								<a class="footer-text" href="legal.html">
+									<b>Aviso legal</b>
+								</a>
+								<a class="footer-text" href="creditos.html">
+									<b>Créditos </b>
+								</a>
+								<a class="footer-text" href="contacto.html">
+									<b>Contacto</b>
+								</a>
+							</div>
+						</footer>
+					</div><!-- #content-->
+				</div><!-- #container-->
 
-                        <div id="body-phone-apartados" style="margin-bottom: 26%;">
-                            <p class="contacto-parrafo-1">Distribucaion exclusiva de <br/> BIOGEN IDEC SPAIN </p>
-                            <p  class="contacto-parrafo-2">TY-SP-0021</p>
-                            <p  class="contacto-parrafo-3" style="margin-bottom: 0px;">© 2013 MÉDERIC EDICIONES, S.L.</p>
-                            <p  class="contacto-parrafo-4">(Para todos los idiomas. Diseño programación y arquitectura de la aplicación)<br>
-                                CARRER DE MUNT, 41 08392 SANT ANDREU DE LLAVANERES <br>(ESPAÑA) <br> <a href='link_externo-http://www.medericediciones.com'> www.medericediciones.com</a></p>
-                        </div>
-                        <!-- aqui va el modal de contacto -->
-                        <footer id="footer">
-                            <div class="footer-barra"></div>
-                            <div id="footer-enlaces">
-                                <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
-                                <a class="footer-text" href="creditos.html"><b>Créditos </b></a>
-                                <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
-                            </div>
-                            <div id="footer-enlaces-phone">
-                                <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
-                                <a class="footer-text" href="creditos.html"><b>Créditos </b></a> 
-                                <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
-                            </div>
-                        </footer>
-                    </div><!-- #content-->
-                </div><!-- #container-->
-
-            </section><!-- #middle-->
-        </div><!-- fin del wrapper -->
-    </body>
+			</section><!-- #middle-->
+		</div><!-- fin del wrapper -->
+	</body>
 
 </html>

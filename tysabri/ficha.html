@@ -19,10 +19,8 @@
 
         <script type="text/javascript">
             $(document).ready(function() {
-                  $('#wrapper').css("display", "none");
-            $('#cargando').css("display", "block");
-                  var abrir = localStorage.getItem("apartado-abierto");
-                  cargarContenido(abrir);  
+            var abrir = localStorage.getItem("apartado-abierto");
+             cargarContenido(abrir);  
             });
 
         </script>
@@ -45,10 +43,14 @@
                     <div id="content">
                         <div id="ver-video-phone">
                             <div id="botones-header-phone">
-                                <button class="boton-info"> </button>
+                                <a href="#" data-reveal-id="modalVideo"><div id="boton-presentacion-phone">
+                                    <img src="images/boton-play.png"/>
+                                </div></a>
+                                <span id="texto-video">VÍDEO PRESENTACIÓN</span>
+                                <a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
                             </div>
                             <div id="imag-logo-phone">
-                                <a href="index.html"> <img src="images/logo.png" id="imagen-logo-phone" /></a>
+                               <a href="index.html"><img src="images/logo.png" id="imagen-logo-phone"></a>
                             </div>
                             <div id="buscador-phone" align="center">
                                 <input class="search-input" placeholder="Buscar" /> <button class="boton-lupa"> </button>

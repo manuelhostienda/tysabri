@@ -1,127 +1,178 @@
 <!DOCTYPE html>
 <html>
 
-    <head >
-        <meta charset="utf-8" />
-        <title>.: Tysabri :.</title>
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-        <!-- FAVICON -->
-        <link rel="shortcut icon" href="images/favico.ico" />
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/tablets.css" />
-        <link rel="stylesheet" type="text/css" href="css/phone.css" />
-        <!-- JS -->
-        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-        <!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/funciones.js"></script>
+	<head >
+		<meta charset="utf-8" />
+		<title>.: Tysabri :.</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="images/favico.ico" />
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/tablets.css" />
+		<link rel="stylesheet" type="text/css" href="css/phone.css" />
+		<!-- JS -->
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/funciones.js"></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script>
 
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('#myButton').click(function(e) {
-                    e.preventDefault();
-                    $('#myModal').reveal();
-                });
-            });
-        </script>
-    </head>
-    <body>
-        <div id="wrapper">
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#myButton').click(function(e) {
+					e.preventDefault();
+					$('#myModal').reveal();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
 
-            <header id="header">
-                <img  src="images/top.png"/>
-            </header><!-- #header-->
-            <section id="middle">
+			<header id="header">
+				<img  src="images/top.png"/>
+			</header><!-- #header-->
+			<section id="middle">
 
-                <div id="container">
-                    <aside id="sideLeft">
-                        <a href="index.html" ><img src="images/logo.png" id="logo-side" /></a>
-                    </aside><!-- #sideLeft -->
-                    <div id="content">
+				<div id="container">
+					<aside id="sideLeft">
+						<a href="index.html" >
+							<img src="images/logo.png" id="logo-side" />
+						</a>
+					</aside><!-- #sideLeft -->
+					<div id="content">
 
-                        <div id="banner-phone">
-                            <div id="botones-header-phone">
-                                <button class="boton-info"> </button>
-                                <a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
-                            </div>
-                            <div id="imag-logo-phone-apartados">
-                                <a href="index.html" ><img src="images/logo.png" id="imagen-logo-phone-apartados"></a>
-                            </div>
-                            <div id="buscador-phone" align="left">
-                                <input class="search-input-apartados" placeholder="Buscar" /> <button class="boton-lupa"> </button>
+						<div id="ver-video-phone">
+							<div id="botones-header-phone">
+								<a href="#" data-reveal-id="modalVideo">
+									<div id="boton-presentacion-phone">
+										<img src="images/boton-play.png"/>
+									</div>
+								</a>
+								<span id="texto-video">VÍDEO PRESENTACIÓN</span>
+								<a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
+							</div>
+							<div id="imag-logo-phone">
+								<img src="images/logo.png" id="imagen-logo-phone">
+							</div>
+							<div id="buscador-phone" align="center">
+								<input class="search-input" placeholder="Buscar" />
+								<button class="boton-lupa"> </button>
+								<div class="header-barra"></div>
+							</div>
 
-                            </div>
-                        </div>
+						</div>
 
+						<div id="myModal" class="reveal-modal">
+							<table id="tablemodal" width="100%">
+								<tr>
+									<td style="text-align: center;">
+										<a href="http://www.facebook.com" class="" style="text-decoration: none;">
+											<img src="images/logo-fb.png" id="logo-fb" class="" /> <br> <span class="ModalText">Facebook</span>
+										</a>
+									</td>
+									<td style="text-align: center;">
+										<a href="https://plus.google.com" class="" style="text-decoration: none; margin-left: 5%;">
+											<img src="images/logo-google.png" id="logo-google" class="" /> <br> <span class="ModalText" style="margin-left: 5%;">Google+</span>
+										</a>
+									</td>
+								</tr>
+							</table>
+						</div>
 
-                        <div id="myModal" class="reveal-modal">
-                            <table id="tablemodal" width="100%">
-                                <tr>
-                                    <td style="text-align: center;"> <a href="http://www.facebook.com" class="" style="text-decoration: none;"> <img src="images/logo-fb.png" id="logo-fb" class="" /> <br> <span class="ModalText">Facebook</span></a> </td>
-                                    <td style="text-align: center;"> <a href="https://plus.google.com" class="" style="text-decoration: none; margin-left: 5%;"> <img src="images/logo-google.png" id="logo-google" class="" /> <br> <span class="ModalText" style="margin-left: 5%;">Google+</span></a> </td>
-                                </tr>
-                            </table>
-                        </div>
+						<div id="buscar-ficha">
+							<div id="buscador" align="right">
+								<input class="search-input" placeholder="Buscar" />
+								<button class="boton-buscar">Buscar</button>
 
-                        <div id="buscar-ficha">
-                            <div id="buscador" align="right">
-                                <input class="search-input" placeholder="Buscar" /> <button class="boton-buscar">Buscar</button>
+							</div>
+						</div>
+						<div class="header-barra-mobile"></div>
+						<div id='aviso-legal'>
+							<h2 class="ficha-titulo">aviso legal</h2>
+							<p>Denominación Social: Méderic Ediciones, S.L.</p>
+							<p>Domicilio Social: C/ Munt nº 41 08392 Sant Andreu de Llavaneres (Barcelona)</p>
+							<p>CIF: B65627416</p>
+							<p>Teléfono: +34 93 188 46 30</p>
+							<p>
+								e-Mail:
+								<a href='mailto:info@medericediciones.com'>info@medericediciones.com</a>
+							</p>
 
-                            </div>
-                        </div>
-                        <div class="header-barra-mobile"></div>
-                        <div id='aviso-legal'>
-                            <h2 class="ficha-titulo">aviso legal</h2>
-                            <p>Denominación Social: Méderic Ediciones, S.L.</p>
-                            <p>Domicilio Social: C/ Munt nº 41 08392 Sant Andreu de Llavaneres (Barcelona)</p>
-                            <p>CIF: B65627416</p>
-                            <p>Teléfono: +34 93 188 46 30</p>
-                            <p>e-Mail: <a href='mailto:info@medericediciones.com'>info@medericediciones.com</a></p>
+							<p>Inscrita en el Registro Mercantil de Barcelona: Inscripción en Registro Mercantil de Barcelona, tomo 42720, folio 118, hoja 411213 e inscripción 1ª</p>
+							<b>OBJETO</b><br />
+							<p>Méderic Ediciones, S.A. en adelante el prestador, responsable del sitio web, pone a disposición de los usuarios el presente documento con el que pretende dar cumplimiento a las obligaciones dispuestas en la Ley Orgánica 15/1999 de Protección de datos de carácter personal, Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), así como informar a todos los usuarios del sitio web/aplicación respecto a cuáles son las condiciones de uso del sitio.</p>
+							<p>Toda persona que acceda a esta aplicación asume el papel de usuario, comprometiéndose a la observancia y cumplimiento riguroso de las disposiciones aquí señaladas, así como a cualesquiera otra disposición legal que fuera del sitio web/aplicación.</p>
+							<p>El prestador se reserva el derecho a modificar cualquier tipo de información que pudiera aparecer en la web/aplicación, sin que exista obligación de preavisar o poner en conocimiento de los usuarios dichas obligaciones, entendiéndose como suficiente con la publicación en el sitio web/aplicación del prestador.</p>
+							<br /><b>COOKIES</b><br />
+							<p>
+							El sitio web/aplicación del prestador puede utilizar cookies (pequeños archivos de información que el servidor envía al ordenador de quien accede a la página) para llevar a cabo determinadas funciones que son consideradas imprescindibles para el correcto funcionamiento y visualización del sitio. Las cookies utilizadas en el sitio web/aplicación tienen, en todo caso, carácter temporal con la única finalidad de hacer más eficaz su transmisión ulterior y desaparecen al terminar la sesión del usuario. En ningún caso se utilizarán las cookies para recoger información de carácter personal.
+							<p>
+							<p>
+							Si usted lo desea, puede configurar su navegador, utilizando las opciones que le permiten la gestión de las cookies.
+							<p>
+							<p> Para más información acerca de las cookies: </p>
+							<br />
+							<a href='link_externo-http://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)'>Cookies (Wikipedia)</a><br />
+							<br /><b>RESPONSABILIDAD</b><br />
+							<p>
+							El prestador se exime de cualquier tipo de responsabilidad derivada de la información publicada en su sitio web/aplicación, siempre que esta información haya sido manipulada o introducida por un tercero ajeno al mismo.
+							<p>
+							<p>
+							Desde el sitio web/aplicación del cliente es posible que se redirija a contenidos de terceros sitios web. Dado que el prestador no puede controlar siempre los contenidos introducidos por los terceros en sus sitios web/aplicación, éste no asume ningún tipo de responsabilidad respecto a dichos contenidos. En todo caso, el prestador manifiesta que procederá a la retirada inmediata de cualquier contenido que pudiera contravenir la legislación nacional o internacional, la moral o el orden público, procediendo a la retirada inmediata de la redirección a dicho sitio web/aplicación, poniendo en conocimiento de las autoridades competentes el contenido en cuestión.
+							<p>
+							<p>
+							El prestador no se hace responsable de la información y contenidos almacenados, a título enunciativo pero no limitativo, en foros, comentarios, redes sociales o cualesquiera otro medio que permita a terceros publicar contenidos de forma independiente en la página web/aplicación del prestador. No obstante y en cumplimiento de lo dispuesto en el art. 11 y 16 de la LSSI-CE, el prestador se pone a disposición de todos los usuarios, autoridades y fuerzas de seguridad, y colaborando de forma activa en la retirada o en su caso bloqueo de todos aquellos contenidos que pudieran afectar o contravenir la legislación nacional, o internacional, derechos de terceros o la moral y el orden público. En caso de que el usuario considere que existe en el sitio web/aplicación algún contenido que pudiera ser susceptible de esta clasificación, se ruega lo notifique de forma inmediata al administrador del sitio web/aplicación.
+							<p>
+							<p>
+							Este sitio web/aplicación ha sido revisado y probado para que funcione correctamente. En principio, puede garantizarse el correcto funcionamiento los 365 días del año, 24 horas al día. No obstante, el prestador no descarta la posibilidad de que existan ciertos errores de programación, o que acontezcan causas de fuerza mayor, catástrofes naturales, huelgas, o circunstancias semejantes que hagan imposible el acceso a la página web/aplicación.
+							<p>
+							<br /><b>PROPIEDAD INTELECTUAL E INDUSTRIAL</b><br />
+							<p>El sitio web/aplicación, incluyendo a título enunciativo pero no limitativo su programación, edición, compilación y demás elementos necesarios para su funcionamiento, los diseños, logotipos, texto, material formativo y/o gráficos son propiedad del prestador o en su caso dispone de licencia o autorización expresa por parte de los autores (ver créditos sitio). Todos los contenidos del sitio web/aplicación se encuentran debidamente protegidos por la normativa de propiedad intelectual e industrial, así como inscritos en los registros públicos correspondientes. </p>
+							<p>Independientemente de la finalidad para la que fueran destinados, la reproducción total o parcial, uso, explotación, distribución y comercialización, requiere en todo caso de la autorización escrita previa por parte del prestador. Cualquier uso no autorizado previamente por parte del prestador será considerado un incumplimiento grave de los derechos de propiedad intelectual o industrial del autor.</p>
+							<p>
+							Los diseños, logotipos, texto y/o gráficos ajenos al prestador y que pudieran aparecer en el sitio web, pertenecen a sus respectivos propietarios, siendo ellos mismos responsables de cualquier posible controversia que pudiera suscitarse respecto a los mismos. En todo caso, el prestador cuenta con la autorización expresa y previa por parte de los mismos.
+							<p>
+							<p>Los diseños, logotipos, texto y/o gráficos ajenos al prestador y que pudieran aparecer en el sitio web/aplicación, pertenecen a sus respectivos propietarios, siendo ellos mismos responsables de cualquier posible controversia que pudiera suscitarse respecto a los mismos. En todo caso, el prestador cuenta con la autorización expresa y previa por parte de los mismos.</p>
+							<p>
+								Para realizar cualquier tipo de observación respecto a posibles incumplimientos de los derechos de propiedad intelectual o industrial, así como sobre cualquiera de los contenidos del sitio web/aplicación, puede hacerlo a través del siguiente correo electrónico
+								<a href="mailto:info@medericediciones.com">info@medericediciones.com.</a>
+							</p>
+							<br /><b>LEY APLICABLE Y JURISDICCIÓN</b><br />
+							<p>Para la resolución de todas las controversias o cuestiones relacionadas con el presente sitio web/aplicación o de las actividades en él desarrolladas, será de aplicación la legislación española, a la que se someten expresamente las partes, siendo competentes para la resolución de todos los conflictos derivados o relacionados con su uso los Juzgados y Tribunales de Barcelona.</p>
+							<br />
+						</div>
+						<footer id="footer">
+							<div class="footer-barra"></div>
+							<div id="footer-enlaces">
+								<a class="footer-text" href="legal.html">
+									<b>Aviso legal</b>
+								</a>
+								<a class="footer-text" href="creditos.html">
+									<b>Créditos</b>
+								</a>
+								<a class="footer-text" href="contacto.html">
+									<b>Contacto</b>
+								</a>
+							</div>
+							<div id="footer-enlaces-phone">
+								<a class="footer-text" href="legal.html">
+									<b>Aviso legal</b>
+								</a>
+								<a class="footer-text" href="creditos.html">
+									<b>Créditos </b>
+								</a>
+								<a class="footer-text" href="contacto.html">
+									<b>Contacto</b>
+								</a>
+							</div>
+						</footer>
+					</div><!-- #content-->
+				</div><!-- #container-->
 
-                            <p>Inscrita en el Registro Mercantil de Barcelona: Inscripción en Registro Mercantil de Barcelona, tomo 42720, folio 118, hoja 411213 e inscripción 1ª</p>
-                            <b>OBJETO</b><br />
-                            <p>Méderic Ediciones, S.A. en adelante el prestador, responsable del sitio web, pone a disposición de los usuarios el presente documento con el que pretende dar cumplimiento a las obligaciones dispuestas en la Ley Orgánica 15/1999 de Protección de datos de carácter personal, Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), así como informar a todos los usuarios del sitio web/aplicación respecto a cuáles son las condiciones de uso del sitio.</p>
-                            <p>Toda persona que acceda a esta aplicación asume el papel de usuario, comprometiéndose a la observancia y cumplimiento riguroso de las disposiciones aquí señaladas, así como a cualesquiera otra disposición legal que fuera del sitio web/aplicación.</p>
-                            <p>El prestador se reserva el derecho a modificar cualquier tipo de información que pudiera aparecer en la web/aplicación, sin que exista obligación de preavisar o poner en conocimiento de los usuarios dichas obligaciones, entendiéndose como suficiente con la publicación en el sitio web/aplicación del prestador.</p>
-                            <br /><b>COOKIES</b><br />
-                            <p>El sitio web/aplicación del prestador puede utilizar cookies (pequeños archivos de información que el servidor envía al ordenador de quien accede a la página) para llevar a cabo determinadas funciones que son consideradas imprescindibles para el correcto funcionamiento y visualización del sitio. Las cookies utilizadas en el sitio web/aplicación tienen, en todo caso, carácter temporal con la única finalidad de hacer más eficaz su transmisión ulterior y desaparecen al terminar la sesión del usuario. En ningún caso se utilizarán las cookies para recoger información de carácter personal. <p> 
-                            <p>Si usted lo desea, puede configurar su navegador, utilizando las opciones que le permiten la gestión de las cookies.<p>
-                            <p>   Para más información acerca de las cookies: </p>
-                            <br /> <a href='link_externo-http://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)'>Cookies (Wikipedia)</a><br />
-                            <br /><b>RESPONSABILIDAD</b><br />
-                            <p> El prestador se exime de cualquier tipo de responsabilidad derivada de la información publicada en su sitio web/aplicación, siempre que esta información haya sido manipulada o introducida por un tercero ajeno al mismo.<p>
-                            <p>Desde el sitio web/aplicación del cliente es posible que se redirija a contenidos de terceros sitios web. Dado que el prestador no puede controlar siempre los contenidos introducidos por los terceros en sus sitios web/aplicación, éste no asume ningún tipo de responsabilidad respecto a dichos contenidos. En todo caso, el prestador manifiesta que procederá a la retirada inmediata de cualquier contenido que pudiera contravenir la legislación nacional o internacional, la moral o el orden público, procediendo a la retirada inmediata de la redirección a dicho sitio web/aplicación, poniendo en conocimiento de las autoridades competentes el contenido en cuestión.<p>
-                            <p>El prestador no se hace responsable de la información y contenidos almacenados, a título enunciativo pero no limitativo, en foros, comentarios, redes sociales o cualesquiera otro medio que permita a terceros publicar contenidos de forma independiente en la página web/aplicación del prestador. No obstante y en cumplimiento de lo dispuesto en el art. 11 y 16 de la LSSI-CE, el prestador se pone a disposición de todos los usuarios, autoridades y fuerzas de seguridad, y colaborando de forma activa en la retirada o en su caso bloqueo de todos aquellos contenidos que pudieran afectar o contravenir la legislación nacional, o internacional, derechos de terceros o la moral y el orden público. En caso de que el usuario considere que existe en el sitio web/aplicación algún contenido que pudiera ser susceptible de esta clasificación, se ruega lo notifique de forma inmediata al administrador del sitio web/aplicación.<p>
-                            <p>Este sitio web/aplicación ha sido revisado y probado para que funcione correctamente. En principio, puede garantizarse el correcto funcionamiento los 365 días del año, 24 horas al día. No obstante, el prestador no descarta la posibilidad de que existan ciertos errores de programación, o que acontezcan causas de fuerza mayor, catástrofes naturales, huelgas, o circunstancias semejantes que hagan imposible el acceso a la página web/aplicación.<p>
-                                <br /><b>PROPIEDAD INTELECTUAL E INDUSTRIAL</b><br />
-                            <p>El sitio web/aplicación, incluyendo a título enunciativo pero no limitativo su programación, edición, compilación y demás elementos necesarios para su funcionamiento, los diseños, logotipos, texto, material formativo y/o gráficos son propiedad del prestador o en su caso dispone de licencia o autorización expresa por parte de los autores (ver créditos sitio). Todos los contenidos del sitio web/aplicación se encuentran debidamente protegidos por la normativa de propiedad intelectual e industrial, así como inscritos en los registros públicos correspondientes. </p>
-                            <p>Independientemente de la finalidad para la que fueran destinados, la reproducción total o parcial, uso, explotación, distribución y comercialización, requiere en todo caso de la autorización escrita previa por parte del prestador. Cualquier uso no autorizado previamente por parte del prestador será considerado un incumplimiento grave de los derechos de propiedad intelectual o industrial del autor.</p>
-                            <p>Los diseños, logotipos, texto y/o gráficos ajenos al prestador y que pudieran aparecer en el sitio web, pertenecen a sus respectivos propietarios, siendo ellos mismos responsables de cualquier posible controversia que pudiera suscitarse respecto a los mismos. En todo caso, el prestador cuenta con la autorización expresa y previa por parte de los mismos.<p>
-                            <p>Los diseños, logotipos, texto y/o gráficos ajenos al prestador y que pudieran aparecer en el sitio web/aplicación, pertenecen a sus respectivos propietarios, siendo ellos mismos responsables de cualquier posible controversia que pudiera suscitarse respecto a los mismos. En todo caso, el prestador cuenta con la autorización expresa y previa por parte de los mismos.</p>
-                            <p>Para realizar cualquier tipo de observación respecto a posibles incumplimientos de los derechos de propiedad intelectual o industrial, así como sobre cualquiera de los contenidos del sitio web/aplicación, puede hacerlo a través del siguiente correo electrónico <a href="mailto:info@medericediciones.com">info@medericediciones.com.</a></p>
-                            <br /><b>LEY APLICABLE Y JURISDICCIÓN</b><br />   
-                            <p>Para la resolución de todas las controversias o cuestiones relacionadas con el presente sitio web/aplicación o de las actividades en él desarrolladas, será de aplicación la legislación española, a la que se someten expresamente las partes, siendo competentes para la resolución de todos los conflictos derivados o relacionados con su uso los Juzgados y Tribunales de Barcelona.</p>
-                            <br />    
-                        </div>
-                        <footer id="footer">
-                            <div class="footer-barra"></div>
-                            <div id="footer-enlaces">
-                                <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
-                                <a class="footer-text" href="creditos.html"><b>Créditos</b> </a>
-                                <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
-                            </div>
-                            <div id="footer-enlaces-phone">
-                                <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
-                                <a class="footer-text" href="creditos.html"><b>Créditos </b></a>
-                                <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
-                            </div>
-                        </footer>
-                    </div><!-- #content-->
-                </div><!-- #container-->
-
-            </section><!-- #middle-->
-        </div><!-- fin del wrapper -->
-    </body>
+			</section><!-- #middle-->
+		</div><!-- fin del wrapper -->
+	</body>
 
 </html>

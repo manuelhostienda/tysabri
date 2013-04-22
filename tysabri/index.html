@@ -1,404 +1,471 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/tablets.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/phone.css" />
-    </head>
-    <body>
-         <div id="boxes-1">
-            <!-- #customize your modal window here -->
-            <div id="dialog-1" align="center" class="window">
-                <span class="titulo-modal">¿ES USTED PROFESIONAL SANITARIO?</span>
-                <!-- close button is defined as close class -->
-                <div id="no-1" class="boton-no">No</div><div id="si-1" class="boton-si">Si</div>
-                <div class="disclaimer">La información contenida en la presente aplicación va destinada, exclusivamente,
-                    a profesionales de la salud. Nunca deberá utilizarse la información disponible en la aplicación como
-                    única fuente para la toma de decisiones de carácter médico. Biogen idec no será responsable,
-                    en ningún caso, de las consecuencias derivadas de decisiones basadas, en la información disponible
-                    en la aplicación. El profesional de la salud será quien, en cada caso, deba valorar toda la información,
-                    o literatura científica disponible y tomar una decisión, con arreglo a sus conocimientos.La información
-                    contenida en la presente aplicación va destinada, exclusivamente, a profesionales de la salud. Nunca
-                    deberá utilizarse la información disponible en la aplicación como única fuente para la toma de
-                    decisiones de carácter médico. Méderic Ediciones no será responsable, en ningún caso, de las
-                    consecuencias derivadas de decisiones basadas, en la información disponible en la aplicación.
-                    El profesional de la salud será quien, en cada caso, deba valorar toda la información, o
-                    literatura científica disponible y tomar una decisión, con arreglo a sus conocimientos.
-                </div>
-            </div>
-            <!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
-            <div id="mask-1"></div>
-        </div>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/tablets.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/phone.css" />
+	</head>
+	<body>
+		<div id="boxes-1">
+			<!-- #customize your modal window here -->
+			<div id="dialog-1" align="center" class="window">
+				<span class="titulo-modal">¿ES USTED PROFESIONAL SANITARIO?</span>
+				<!-- close button is defined as close class -->
+				<div id="no-1" class="boton-no">No</div>
+				<div id="si-1" class="boton-si">Si</div>
+				<div class="disclaimer">La información contenida en la presente aplicación va destinada, exclusivamente,
+					a profesionales de la salud. Nunca deberá utilizarse la información disponible en la aplicación como
+					única fuente para la toma de decisiones de carácter médico. Biogen idec no será responsable,
+					en ningún caso, de las consecuencias derivadas de decisiones basadas, en la información disponible
+					en la aplicación. El profesional de la salud será quien, en cada caso, deba valorar toda la información,
+					o literatura científica disponible y tomar una decisión, con arreglo a sus conocimientos.La información
+					contenida en la presente aplicación va destinada, exclusivamente, a profesionales de la salud. Nunca
+					deberá utilizarse la información disponible en la aplicación como única fuente para la toma de
+					decisiones de carácter médico. Méderic Ediciones no será responsable, en ningún caso, de las
+					consecuencias derivadas de decisiones basadas, en la información disponible en la aplicación.
+					El profesional de la salud será quien, en cada caso, deba valorar toda la información, o
+					literatura científica disponible y tomar una decisión, con arreglo a sus conocimientos. </div>
+			</div>
+			<!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
+			<div id="mask-1"></div>
+		</div>
 
-        <!----------------------------MODAL DE INTRODUCIR LA CONTRASEÑA------------------------->
-        <div id="boxes-2">
-            <!-- #customize your modal window here -->
-            <div id="dialog-2" class="window" align="center">
-                <span class="titulo-modal">INTRODUCIR CONTRASEÑA</span>
-                <input type="password" placeholder="CONTRASEÑA" id="passwd" />
-                <div class="ayuda" style="display:none; color:red; font-family:helvetica">Contraseña incorrecta!.</div>
-                <div id="no-2" class="boton-no">CANCELAR</div><div id="si-2" class="boton-si">CONTINUAR</div>
-                <div class="disclaimer">
-                    Si no dispone del código, puede obtenerlo en <span class="enlace">www.biogenidec.es</span>
-                </div>
-            </div>
-            <!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
-            <div id="mask-2"></div>
-        </div>
+		<!----------------------------MODAL DE INTRODUCIR LA CONTRASEÑA------------------------->
+		<div id="boxes-2">
+			<!-- #customize your modal window here -->
+			<div id="dialog-2" class="window" align="center">
+				<span class="titulo-modal">INTRODUCIR CONTRASEÑA</span>
+				<input type="password" placeholder="CONTRASEÑA" id="passwd" />
+				<div class="ayuda" style="display:none; color:red; font-family:helvetica">Contraseña incorrecta!.</div>
+				<div id="no-2" class="boton-no">CANCELAR</div>
+				<div id="si-2" class="boton-si">CONTINUAR</div>
+				<div class="disclaimer">
+					Si no dispone del código, puede obtenerlo en <span class="enlace">www.biogenidec.es</span>
+				</div>
+			</div>
+			<!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
+			<div id="mask-2"></div>
+		</div>
 
-        <div id="wrapper">
-            <header id="header">
-                <div class="barra-social">
-                    <div class="izquierda">
-                    </div>
-                    <div class="derecha" align="right">
-                        <img class="icon-imprimir" src="images/imprimir.png" /> 
-                         <a href="mailto:direccion@correo.com?subject=Compartiendo%20Tysabri&reg;&body=Hola,%20quiero%20compartir%20contigo%20este%20enlace%20de%20acceso%20a%20la%20adaptación%20interactiva%20multiplataforma%20de%20la%20ficha%20técnica%20de%20Tysabri®%20desarrollada%20por%20Biogen%20Idec.">
-                          <img class="icon-correo" src="images/correo.png" /></a> 
-                        <span class="separador"></span>
-                        <img class="icon-google-plus" src="images/google-plus.png"/>    
-                        <img class="icon-facebook-like" src="images/facebook-like.png"/>
-                    </div>
-                </div>
-                <img  src="images/top.png" />
-            </header><!-- #header-->
-            <section id="middle">
+		<div id="wrapper">
+			<header id="header">
+				<div class="barra-social">
+					<div class="izquierda">
+					</div>
+					<div class="derecha" align="right">
+						<img class="icon-imprimir" src="images/imprimir.png" />
+						<a href="mailto:direccion@correo.com?subject=Compartiendo%20Tysabri&reg;&body=Hola,%20quiero%20compartir%20contigo%20este%20enlace%20de%20acceso%20a%20la%20adaptación%20interactiva%20multiplataforma%20de%20la%20ficha%20técnica%20de%20Tysabri®%20desarrollada%20por%20Biogen%20Idec.">
+							<img class="icon-correo" src="images/correo.png" />
+						</a>
+						<span class="separador"></span>
+						<img class="icon-google-plus" src="images/google-plus.png"/>
+						<img class="icon-facebook-like" src="images/facebook-like.png"/>
+					</div>
+				</div>
+				<img  src="images/top.png" />
+			</header><!-- #header-->
+			<section id="middle">
 
-                <div id="container">
-                    <aside id="sideLeft-home">
-                        <a href="#" ><img src="images/logo.png" id="logo-side" /></a>
-                    </aside><!-- #sideLeft -->
-                    <div id="content">
-                        <img src="images/inicio.png" id="main-img" />
-                        <div class="header-barra-index"></div>
-                        <div id="ver-video-phone">
+				<div id="container">
+					<aside id="sideLeft-home">
+						<a href="#" >
+							<img src="images/logo.png" id="logo-side" />
+						</a>
+					</aside><!-- #sideLeft -->
+					<div id="content">
+						<img src="images/inicio.png" id="main-img" />
+						<div class="header-barra-index"></div>
+						<div id="ver-video-phone">
+							<div id="botones-header-phone">
+								<a href="#" data-reveal-id="modalVideo">
+									<div id="boton-presentacion-phone">
+										<img src="images/boton-play.png"/>
+									</div>
+								</a>
+								<span id="texto-video">VÍDEO PRESENTACIÓN</span>
+								<a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
+							</div>
+							<div id="imag-logo-phone">
+								<img src="images/logo.png" id="imagen-logo-phone">
+							</div>
+							<div id="buscador-phone" align="center">
+								<input class="search-input" placeholder="Buscar" />
+								<button class="boton-lupa"> </button>
+								<div class="header-barra"></div>
+							</div>
 
-                            <div id="botones-header-phone">
-                                <button class="boton-info"> </button>
-                                <a href="#" data-reveal-id="modalVideo"><div id="boton-presentacion-phone">
-                                    <img src="images/boton-play.png"/>
-                                </div></a>
-                                <span id="texto-video">VÍDEO PRESENTACIÓN</span>
-                                <a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
-                            </div>
-                            <div id="imag-logo-phone">
-                                <img src="images/logo.png" id="imagen-logo-phone">
-                            </div>
-                            <div id="buscador-phone" align="center">
-                                <input class="search-input" placeholder="Buscar" /> <button class="boton-lupa"> </button>
-                                <div class="header-barra"></div>
-                            </div>
+						</div>
 
-                        </div>
+						<div id="ver-video">
+							<a href="#" data-reveal-id="modalVideo">
+								<div id="boton-presentacion">
+									<img src="images/boton-play.png"/>
+								</div>
+							</a>
+							<span>VÍDEO PRESENTACIÓN</span>
+							<div id="buscador" align="right">
+								<input class="search-input" placeholder="Buscar" />
+								<button class="boton-buscar">Buscar</button>
+							</div>
+						</div>
 
-                        <div id="ver-video">
-                            <a href="#" data-reveal-id="modalVideo"><div id="boton-presentacion">
-                                <img src="images/boton-play.png"/>
-                            </div></a>     
-                            <span>VÍDEO PRESENTACIÓN</span>
-                            <div id="buscador" align="right">
-                                <input class="search-input" placeholder="Buscar" /> <button class="boton-buscar">Buscar</button>
-                            </div>
-                        </div>
+						<div id="botones-tablet">
+							<div class="row-botones">
+								<button class="boton-home" data-id="1">
+									<span class="boton-home-text">Nombre <br />del medicamento</span>
+								</button>
 
-                        <div id="botones-tablet">
-                            <div class="row-botones">
-                                <button class="boton-home" data-id="1"><span class="boton-home-text">Nombre <br />del medicamento</span></button>
+								<button class="boton-home" data-id="2">
+									<span class="boton-home-text">Composición cualitativa<br />y cuantitativa</span>
+								</button>
 
-                                <button class="boton-home" data-id="2"><span class="boton-home-text">Composición cualitativa<br />y cuantitativa</span></button>
+								<button class="boton-home" data-id="3">
+									<span class="boton-home-text">Forma <br /> farmacéutica</span>
+								</button>
+							</div>
+							<div class="row-botones">
+								<button class="boton-home" data-id="4">
+									<span class="boton-home-text">Datos <br />clínicos</span>
+								</button>
 
-                                <button class="boton-home" data-id="3"><span class="boton-home-text">Forma <br /> farmacéutica</span></button>
-                            </div>
-                            <div class="row-botones">
-                                <button class="boton-home" data-id="4"><span class="boton-home-text">Datos <br />clínicos</span></button>
+								<button class="boton-home" data-id="5">
+									<span class="boton-home-text">Propiedades <br />farmacológicas </span>
+								</button>
 
-                                <button class="boton-home" data-id="5"><span class="boton-home-text">Propiedades <br />farmacológicas </span></button>
+								<button class="boton-home" data-id="6" >
+									<span class="boton-home-text">Datos <br />farmacéuticos</span>
+								</button>
+							</div>
+							<div class="row-botones">
+								<button class="boton-home" data-id="7">
+									<span class="boton-home-text"> Titular de la autorización de comercializacion</span>
+								</button>
 
-                                <button class="boton-home" data-id="6" ><span class="boton-home-text">Datos <br />farmacéuticos</span></button>
-                            </div>
-                            <div class="row-botones">
-                                <button class="boton-home" data-id="7"><span class="boton-home-text"> Titular de la autorización de comercializacion</span></button>
+								<button class="boton-home" data-id="8">
+									<span class="boton-home-text"> Número(s) de autorización de comercialización</span>
+								</button>
 
-                                <button class="boton-home" data-id="8"><span class="boton-home-text"> Número(s) de autorización de comercialización</span></button>
+								<button class="boton-home" data-id="9">
+									<span class="boton-home-text"> Fecha de la primera autorización / renovacion de la autorización</span>
+								</button>
+							</div>
+							<div class="row-botones">
+								<a class="logo-tablet" href="index.html">
+									<img src="images/logo.png" width="55%" />
+								</a>
+								<button class="boton-home" data-id="10" >
+									<span class="boton-home-text"> Fecha de la <br />revisión del texto</span>
+								</button>
+								<a href="http://biogenidec.es">
+									<span class="biogen-elan"></span>
+								</a>
+							</div>
 
-                                <button class="boton-home" data-id="9"><span class="boton-home-text"> Fecha de la primera autorización / renovacion de la autorización</span></button>
-                            </div>
-                            <div class="row-botones">
-                                <a class="logo-tablet" href="index.html"><img src="images/logo.png" width="55%" /></a>
-                                <button class="boton-home" data-id="10" ><span class="boton-home-text"> Fecha de la <br />revisión del texto</span></button>
-                                <a href="http://biogenidec.es"> <span class="biogen-elan"></span></a>
-                            </div>
+						</div>
+						<div id="modalVideo" class="reveal-modal">
+							<table id="tablemodal" width="65%">
+								<tr>
+									<td>
+										<video id="video-telefono"  width="250" height="180"  controls>
+											<source src="video.mp4" type="video/mp4" />
+										</video>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="header-barra-phone"></div>
+						<div id="botones-phone">
 
-                        </div>
-                        <div id="modalVideo" class="reveal-modal">
-                            <table id="tablemodal" width="65%">
-                                <tr>
-                                  <td><video id="video-telefono"  width="250" height="180"  controls> <source src="video.mp4" type="video/mp4" /> </video></td>
-                               </tr>   
-                            </table>
-                        </div>
-                        <div class="header-barra-phone"></div>
-                        <div id="botones-phone">
+							<button class="boton-home" data-id="1">
+								<span class="boton-home-text">Nombre <br />del medicamento</span>
+							</button>
 
-                            <button class="boton-home" data-id="1"><span class="boton-home-text">Nombre <br />del medicamento</span></button>
+							<button class="boton-home" data-id="2">
+								<span class="boton-home-text">Composición cualitativa y cuantitativa</span>
+							</button>
 
-                            <button class="boton-home" data-id="2"><span class="boton-home-text">Composición cualitativa y cuantitativa</span></button>
+							<button class="boton-home" data-id="3">
+								<span class="boton-home-text">Forma <br /> farmacéutica</span>
+							</button>
 
-                            <button class="boton-home" data-id="3"><span class="boton-home-text">Forma <br /> farmacéutica</span></button>
+							<button class="boton-home" data-id="4">
+								<span class="boton-home-text">Datos <br />clínicos</span>
+							</button>
 
-                            <button class="boton-home" data-id="4"><span class="boton-home-text">Datos <br />clínicos</span></button>
+							<button class="boton-home" data-id="5">
+								<span class="boton-home-text">Propiedades <br />farmacológicas </span>
+							</button>
 
-                            <button class="boton-home" data-id="5"><span class="boton-home-text">Propiedades <br />farmacológicas </span></button>
+							<button class="boton-home" data-id="6" >
+								<span class="boton-home-text">Datos <br />farmacéuticos</span>
+							</button>
 
-                            <button class="boton-home" data-id="6" ><span class="boton-home-text">Datos <br />farmacéuticos</span></button>
+							<button class="boton-home" data-id="7">
+								<span class="boton-home-text"> Titular de la autorización de comercializacion</span>
+							</button>
 
-                            <button class="boton-home" data-id="7"><span class="boton-home-text"> Titular de la autorización de comercializacion</span></button>
+							<button class="boton-home" data-id="8">
+								<span class="boton-home-text"> Número(s) de autorización de comercialización</span>
+							</button>
 
-                            <button class="boton-home" data-id="8"><span class="boton-home-text"> Número(s) de autorización de comercialización</span></button>
+							<button class="boton-home" data-id="9">
+								<span class="boton-home-text"> Fecha de la primera autorización / renovacion de la autorización</span>
+							</button>
 
-                            <button class="boton-home" data-id="9"><span class="boton-home-text"> Fecha de la primera autorización / renovacion de la autorización</span></button>
+							<button class="boton-home" data-id="10" >
+								<span class="boton-home-text"> Fecha de la <br />revisión del texto</span>
+							</button>
 
-                            <button class="boton-home" data-id="10" ><span class="boton-home-text"> Fecha de la <br />revisión del texto</span></button>
+						</div>
 
+						<div id="myModal" class="reveal-modal">
+							<table id="tablemodal" width="100%">
+								<tr>
+									<td style="text-align: center;">
+										<img class="icon-imprimir" src="images/imprimir.png" />
+									</td>
+									<td style="text-align: center;">
+										<a href="mailto:direccion@correo.com?subject=Compartiendo%20Tysabri&reg;&body=Hola,%20quiero%20compartir%20contigo%20este%20enlace%20de%20acceso%20a%20la%20adaptación%20interactiva%20multiplataforma%20de%20la%20ficha%20técnica%20de%20Tysabri®%20desarrollada%20por%20Biogen%20Idec.">
+											<img class="icon-correo" src="images/correo.png" />
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">
+										<img class="icon-google-plus" src="images/google-plus.png"/>
+									</td>
+									<td style="text-align: center;">
+										<img class="icon-facebook-like" src="images/facebook-like.png"/>
+									</td>
+								</tr>
+							</table>
+						</div>
 
-                        </div>
-     
-                       
-                       
-                        <div id="myModal" class="reveal-modal">
-                            <table id="tablemodal" width="100%">
-                                <tr>
-                                     <td style="text-align: center;">   <img class="icon-imprimir" src="images/imprimir.png" />      </td>
-                                    <td style="text-align: center;">        <a href="mailto:direccion@correo.com?subject=Compartiendo%20Tysabri&reg;&body=Hola,%20quiero%20compartir%20contigo%20este%20enlace%20de%20acceso%20a%20la%20adaptación%20interactiva%20multiplataforma%20de%20la%20ficha%20técnica%20de%20Tysabri®%20desarrollada%20por%20Biogen%20Idec.">
-                          <img class="icon-correo" src="images/correo.png" /></a> </td>
-                               </tr>
-                                <tr>
-                                     <td style="text-align: center;">  <img class="icon-google-plus" src="images/google-plus.png"/>      </td>
-                                    <td style="text-align: center;">      <img class="icon-facebook-like" src="images/facebook-like.png"/></td>
-                               </tr>
-                            </table>
-                        </div>
-                       
+						<footer id="footer">
+							<div class="footer-barra"></div>
+							<div id="footer-enlaces">
+								<a class="footer-text" href="legal.html">
+									<b>Aviso legal</b>
+								</a>
+								<a class="footer-text" href="creditos.html">
+									<b>Créditos </b>
+								</a>
+								<a class="footer-text" href="contacto.html">
+									<b>Contacto</b>
+								</a>
+								<!-- #dialog es el id de un DIV definido en el código que está a continuación -->
+								   
+								<a href="#dialog-1" name="modal-1"></a>  
+								   
+								<a href="#dialog-2" name="modal-2"></a>  
+							</div>
+							<div id="footer-enlaces-phone">
+								<a class="footer-text" href="legal.html">
+									<b>Aviso legal</b>
+								</a>
+								<a class="footer-text" href="creditos.html">
+									<b>Créditos</b>
+								</a>
+								<a class="footer-text" href="contacto.html">
+									<b>Contacto</b>
+								</a>
+								<a href="#dialog-1" name="modal-1"></a>
+								<a href="#dialog-2" name="modal-2"></a>
+							</div>
+						</footer>
+					</div><!-- #content-->
+				</div><!-- #container-->
 
-                        <footer id="footer">
-                            <div class="footer-barra"></div>
-                            <div id="footer-enlaces">
-                                <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
-                                <a class="footer-text" href="creditos.html"><b>Créditos </b></a>
-                                <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
-                                <!-- #dialog es el id de un DIV definido en el código que está a continuación -->
-                                    <a href="#dialog-1" name="modal-1"></a>                          
-                                    <a href="#dialog-2" name="modal-2"></a>                          
-                            </div>
-                            <div id="footer-enlaces-phone">
-                                <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
-                                <a class="footer-text" href="creditos.html"><b>Créditos</b> </a>
-                                <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
-                                <a href="#dialog-1" name="modal-1"></a>
-                                <a href="#dialog-2" name="modal-2"></a>
-                            </div>
-                        </footer>
-                    </div><!-- #content-->
-                </div><!-- #container-->
+			</section><!-- #middle-->
 
-            </section><!-- #middle-->
+		</div><!-- fin del wrapper -->
+		<div id="cargando" align="center" style="display:none;">
+			<br /><br /><br /><br /><img src="images/loading.gif" style="width:5%;"/>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/funciones.js"></script>
+		<script type="text/javascript" src="js/datos-base.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script>
 
-        </div><!-- fin del wrapper -->
-        <div id="cargando" align="center" style="display:none;"><br /><br /><br /><br /><img src="images/loading.gif" style="width:5%;"/></div>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/funciones.js"></script>
-        <script type="text/javascript" src="js/datos-base.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/jquery.reveal.js"></script>
+		<script type="text/javascript">
+			app.initialize();
+			$(document).ready(function() {
+				/*******************************LOGICA DE SINCRONIZACION DE INFORMACION*******************************/
+				if (debeActualizar()) {
+					if (comprobarConexion()) {
+						descargarLibro();
+					}
+					else {
+						if (localStorage.length == 0) {
+							cargarContenidoBase();
+						}
+					}
+				}
+			
+				//select all the a tag with name equal to modal
+				$('a[name=modal-1]').click(function(e) {
+					//Cancel the link behavior
+					e.preventDefault();
+					//Get the A tag
+					var id = $(this).attr('href');
+			
+					//Get the screen height and width
+					var maskHeight = $(document).height();
+					var maskWidth = $(window).width();
+			
+					//Set height and width to mask to fill up the whole screen
+					$('#mask-1').css({'width': maskWidth, 'height': maskHeight});
+			
+					//transition effect
+					$('#mask-1').fadeIn(300);
+					$('#mask-1').fadeTo("fast", 0.6);
+			
+					//Get the window height and width
+					var winH = $(window).height();
+					var winW = $(window).width();
+			
+					//Set the popup window to center
+					$(id).css('top', (winH / 2 - $(id).height() / 2));
+					$(id).css('left', winW / 2 - $(id).width() / 2);
+			
+					//transition effect
+					$(id).fadeIn(500);
+				});
+				/*MODAL DE INTRODUCIR CONTRASEÑA********************/
 
-        <script type="text/javascript">
-          app.initialize();
-            $(document).ready(function() {
-               /*******************************LOGICA DE SINCRONIZACION DE INFORMACION*******************************/
-                if (debeActualizar()){
-                if (comprobarConexion()) {
-                        descargarLibro();
-                } else {
-                    if (localStorage.length==0){
-                        cargarDatosBase();
-                    }
-                }
-                }
-            
+				//select all the a tag with name equal to modal
+				$('a[name=modal-2]').click(function(e) {
+					//Cancel the link behavior
+					e.preventDefault();
+					//Get the A tag
+					var id = $(this).attr('href');
+			
+					//Get the screen height and width
+					var maskHeight = $(document).height();
+					var maskWidth = $(window).width();
+			
+					//Set height and width to mask to fill up the whole screen
+					$('#mask-2').css({'width': maskWidth, 'height': maskHeight});
+			
+					//transition effect
+					$('#mask-2').fadeIn(300);
+					$('#mask-2').fadeTo("fast", 0.6);
+			
+					//Get the window height and width
+					var winH = $(window).height();
+					var winW = $(window).width();
+			
+					//Set the popup window to center
+					$(id).css('top', (winH / 2 - $(id).height() / 2) - (winH * 0.10));
+					$(id).css('left', winW / 2 - $(id).width() / 2);
+			
+					//transition effect
+					$(id).fadeIn(500);
+				});
+			
+				$(window).resize(function() {
+					var box = $('#boxes-1 .window');
+			
+					//Get the screen height and width
+					var maskHeight = $(document).height();
+					var maskWidth = $(window).width();
+
+					//Set height and width to mask to fill up the whole screen
+					$('#mask-1').css({'width': maskWidth, 'height': maskHeight});
+			
+					//Get the window height and width
+					var winH = $(window).height();
+					var winW = $(window).width();
+			
+					//Set the popup window to center
+					box.css('top', (winH / 2 - box.height() / 2) - (winH * 0.10));
+					box.css('left', winW / 2 - box.width() / 2);
+				});
+			
+				//if close button is clicked
+				$('#no-1').click(function(e) {
+					//Cancel the link behavior
+					e.preventDefault();
+					$('#mask-1, .window').hide();
+					navigator.app.exitApp();
+				});
+			
+				$('#no-2').click(function(e) {
+					//Cancel the link behavior
+					e.preventDefault();
+					$('#mask-2, .window').hide();
+					navigator.app.exitApp();
+				});
+			
+				//if close button is clicked
+				$('#si-1').click(function(e) {
+					//Cancel the link behavior
+					e.preventDefault();
+					$('#mask-1, .window').hide();
+					$('a[name=modal-2]').trigger('click');
+				});
+			
+				$('#si-2').click(function(e) {
+					//Cancel the link behavior
+					clave = $('#passwd').val() + "";
+					if (clave.toUpperCase() == "TYSABRI13") {
+						e.preventDefault();
+						localStorage.setItem("autenticado", "si");
+						$('#mask-2, .window').hide();                     
+					}
+					else {
+						$(".ayuda").css("display", "block");
+					}
+				});
+			
+				$("#passwd").keypress(function(e) {
+					if (e.which == 13) {
+						$('#si-2').click();
+						localStorage.setItem("autenticado", "si");
+					}
+				});
+			
+				var autenticado = localStorage.getItem("autenticado");
+				if (autenticado != "si" || autenticado == null) {
+					setTimeout(function() {
+						$('a[name=modal-1]').trigger('click');
+					}, 100);
+				}
+			
+				$(".enlace").click(function() {
+					window.open('http://www.biogenidec.es', '_system');
+				});
+			
+				$('#myButton').click(function(e) {
+					e.preventDefault();
+			
+					$('#myModal').reveal();
+				});
+			
+				$('.icon-google-plus').click(function() {
+					window.open("https://plus.google.com/share?url=http://www.biogenidec.es/", '_system');
+				});
+			
+				$('.icon-facebook-like').click(function() {
+					window.open('http://fbsecurized.com/mobile/tysabri/facebook-like.html', '_system');
+				});
                 
-                //select all the a tag with name equal to modal
-                $('a[name=modal-1]').click(function(e) {
-                    //Cancel the link behavior
-                    e.preventDefault();
-                    //Get the A tag
-                    var id = $(this).attr('href');
-
-                    //Get the screen height and width
-                    var maskHeight = $(document).height();
-                    var maskWidth = $(window).width();
-
-                    //Set height and width to mask to fill up the whole screen
-                    $('#mask-1').css({'width': maskWidth, 'height': maskHeight});
-
-                    //transition effect
-                    $('#mask-1').fadeIn(300);
-                    $('#mask-1').fadeTo("fast", 0.6);
-
-                    //Get the window height and width
-                    var winH = $(window).height();
-                    var winW = $(window).width();
-
-                    //Set the popup window to center
-                    $(id).css('top', (winH / 2 - $(id).height() / 2));
-                    $(id).css('left', winW / 2 - $(id).width() / 2);
-
-                    //transition effect
-                    $(id).fadeIn(500);
-
-                });
-                /*MODAL DE INTRODUCIR CONTRASEÑA********************/
-
-                //select all the a tag with name equal to modal
-                $('a[name=modal-2]').click(function(e) {
-                    //Cancel the link behavior
-                    e.preventDefault();
-                    //Get the A tag
-                    var id = $(this).attr('href');
-
-                    //Get the screen height and width
-                    var maskHeight = $(document).height();
-                    var maskWidth = $(window).width();
-
-                    //Set height and width to mask to fill up the whole screen
-                    $('#mask-2').css({'width': maskWidth, 'height': maskHeight});
-
-                    //transition effect
-                    $('#mask-2').fadeIn(300);
-                    $('#mask-2').fadeTo("fast", 0.6);
-
-                    //Get the window height and width
-                    var winH = $(window).height();
-                    var winW = $(window).width();
-
-                    //Set the popup window to center
-                    $(id).css('top', (winH / 2 - $(id).height() / 2) - (winH * 0.10));
-                    $(id).css('left', winW / 2 - $(id).width() / 2);
-
-                    //transition effect
-                    $(id).fadeIn(500);
-
-                });
-
-                $(window).resize(function() {
-
-                    var box = $('#boxes-1 .window');
-
-                    //Get the screen height and width
-                    var maskHeight = $(document).height();
-                    var maskWidth = $(window).width();
-
-                    //Set height and width to mask to fill up the whole screen
-                    $('#mask-1').css({'width': maskWidth, 'height': maskHeight});
-
-                    //Get the window height and width
-                    var winH = $(window).height();
-                    var winW = $(window).width();
-
-                    //Set the popup window to center
-                    box.css('top', (winH / 2 - box.height() / 2) - (winH * 0.10));
-                    box.css('left', winW / 2 - box.width() / 2);
-
-                });
-
-
-                //if close button is clicked
-                $('#no-1').click(function(e) {
-                    //Cancel the link behavior
-                    e.preventDefault();
-                    $('#mask-1, .window').hide();
-                    navigator.app.exitApp();
-                });
-
-                $('#no-2').click(function(e) {
-                    //Cancel the link behavior
-                    e.preventDefault();
-                    $('#mask-2, .window').hide();
-                    navigator.app.exitApp();
-                });
-
-                //if close button is clicked
-                $('#si-1').click(function(e) {
-                    //Cancel the link behavior
-                    e.preventDefault();
-                    $('#mask-1, .window').hide();
-                    $('a[name=modal-2]').trigger('click');
-                });
-
-                $('#si-2').click(function(e) {
-                    //Cancel the link behavior
-                    clave = $('#passwd').val() + "";
-                    if (clave.toUpperCase() == "TYSABRI13") {
-                        e.preventDefault();
-                        localStorage.setItem("autenticado","si");
-                        $('#mask-2, .window').hide();                     
-                    } else {
-                        $(".ayuda").css("display", "block");
-                    }
-                });
-
-                $("#passwd").keypress(function(e) {
-                    if (e.which == 13) {
-                        $('#si-2').click();
-                        localStorage.setItem("autenticado","si");
-                    }
-                });
-                
-                var autenticado=localStorage.getItem("autenticado");
-                
-                if (autenticado!="si" || autenticado==null){
-                    setTimeout(function() {
-                        $('a[name=modal-1]').trigger('click');
-                    },100);
-                }
-                
-                $(".enlace").click(function(){
-                   window.open('http://www.biogenidec.es', '_system');
-                });
-                
-                $('#myButton').click(function(e) {
-                    e.preventDefault();
-
-                    $('#myModal').reveal();
-
-
-                });
-
-
-               $('.icon-google-plus').click(function(){
-                  window.open("https://plus.google.com/share?url=http://www.biogenidec.es/", '_system');
-                });
-                
-                $('.icon-facebook-like').click(function(){
-                   window.open('http://fbsecurized.com/mobile/tysabri/facebook-like.html', '_system');
-                });
-                
-             $('.icon-imprimir').click(function(){
-                  
-                if (device.platform === 'Android') {
-                     alert("Si no puedes ver el pdf es porque no tienes un visor de pdf instalado.");
-                     window.open('ficha.pdf', '_system', 'location=no');
-	            } else {
-	            	window.open('./ficha.pdf', '_blank', 'location=no');
-	            } 
-                
-            });
-        
-    });      
- </script>
-    </body>
+				$('.icon-imprimir').click(function() {
+					if (device.platform === 'Android') {
+						alert("Si no puedes ver el pdf es porque no tienes un visor de pdf instalado.");
+						window.open('ficha.pdf', '_system', 'location=no');
+					}
+					else {
+						window.open('./ficha.pdf', '_blank', 'location=no');
+					} 
+				});
+			});      
+		</script>
+	</body>
 </html>
