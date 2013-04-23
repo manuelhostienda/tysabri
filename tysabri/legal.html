@@ -54,8 +54,11 @@
 								<a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
 							</div>
 							<div id="imag-logo-phone">
-								<img src="images/logo.png" id="imagen-logo-phone">
+								<a href="index.html">
+									<img src="images/logo.png" id="imagen-logo-phone"/>
+								</a>
 							</div>
+                                    
 							<div id="buscador-phone" align="center">
 								<input class="search-input" placeholder="Buscar" />
 								<button class="boton-lupa"> </button>
@@ -64,18 +67,23 @@
 
 						</div>
 
-						<div id="myModal" class="reveal-modal">
-							<table id="tablemodal" width="100%">
+							<div id="myModal" class="reveal-modal">
+
+							<img class="icon-imprimir" src="images/imprimir.png" />
+							<a href="mailto:direccion@correo.com?subject=Compartiendo%20Tysabri&reg;&body=Hola,%20quiero%20compartir%20contigo%20este%20enlace%20de%20acceso%20a%20la%20adaptación%20interactiva%20multiplataforma%20de%20la%20ficha%20técnica%20de%20Tysabri®%20desarrollada%20por%20Biogen%20Idec.">
+								<img class="icon-correo" src="images/correo.png" />
+							</a>
+							<img class="icon-google-plus" src="images/google-plus.png"/>
+							<img class="icon-facebook-like" src="images/facebook-like.png"/>
+						</div>
+                                    
+                                    <div id="modalVideo" class="reveal-modal">
+							<table id="tablemodal" width="65%">
 								<tr>
-									<td style="text-align: center;">
-										<a href="http://www.facebook.com" class="" style="text-decoration: none;">
-											<img src="images/logo-fb.png" id="logo-fb" class="" /> <br> <span class="ModalText">Facebook</span>
-										</a>
-									</td>
-									<td style="text-align: center;">
-										<a href="https://plus.google.com" class="" style="text-decoration: none; margin-left: 5%;">
-											<img src="images/logo-google.png" id="logo-google" class="" /> <br> <span class="ModalText" style="margin-left: 5%;">Google+</span>
-										</a>
+									<td>
+										<video id="video-telefono"  width="250" height="180"  controls>
+											<source src="video.mp4" type="video/mp4" />
+										</video>
 									</td>
 								</tr>
 							</table>

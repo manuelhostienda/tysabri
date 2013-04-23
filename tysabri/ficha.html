@@ -1,230 +1,279 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>.: Tysabri :.</title>
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-        <!-- FAVICON -->
-        <link rel="shortcut icon" href="images/favicon.ico" />
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/tablets.css" />
-        <link rel="stylesheet" type="text/css" href="css/phone.css" />
-        <!-- JS -->
-        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-        <!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.accordion.source.js"></script>
-        <script type="text/javascript" src="js/funciones.js"></script>
+	<head>
+		<meta charset="utf-8" />
+		<title>.: Tysabri :.</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/tablets.css" />
+		<link rel="stylesheet" type="text/css" href="css/phone.css" />
+		<!-- JS -->
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.accordion.source.js"></script>
+		<script type="text/javascript" src="js/funciones.js">
+            
+		</script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script>
 
-        <script type="text/javascript">
-            $(document).ready(function() {
-            var abrir = localStorage.getItem("apartado-abierto");
-             cargarContenido(abrir);  
-            });
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var abrir = localStorage.getItem("apartado-abierto");
+				cargarContenido(abrir);  
+			});
 
-        </script>
-        <style>
+		</script>
+		<style>
 
-        </style>
-    </head>
-    <body>
-        <div id="wrapper">
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
 
-            <header id="header">
-                <img  src="images/top.png"/>
-            </header><!-- #header-->
-            <section id="middle">
+			<header id="header">
+				<img  src="images/top.png"/>
+			</header><!-- #header-->
+			<section id="middle">
 
-                <div id="container">
-                    <aside id="sideLeft">
-                        <a href="index.html" ><img src="images/logo.png" id="logo-side" /></a>
-                    </aside><!-- #sideLeft -->
-                    <div id="content">
-                        <div id="ver-video-phone">
-                            <div id="botones-header-phone">
-                                <a href="#" data-reveal-id="modalVideo"><div id="boton-presentacion-phone">
-                                    <img src="images/boton-play.png"/>
-                                </div></a>
-                                <span id="texto-video">VÍDEO PRESENTACIÓN</span>
-                                <a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
-                            </div>
-                            <div id="imag-logo-phone">
-                               <a href="index.html"><img src="images/logo.png" id="imagen-logo-phone"></a>
-                            </div>
-                            <div id="buscador-phone" align="center">
-                                <input class="search-input" placeholder="Buscar" /> <button class="boton-lupa"> </button>
-                            </div>
+				<div id="container">
+					<aside id="sideLeft">
+						<a href="index.html" >
+							<img src="images/logo.png" id="logo-side" />
+						</a>
+					</aside><!-- #sideLeft -->
+					<div id="content">
+						<div id="ver-video-phone">
+							<div id="botones-header-phone">
+								<a href="#" data-reveal-id="modalVideo">
+									<div id="boton-presentacion-phone">
+										<img src="images/boton-play.png"/>
+									</div>
+								</a>
+								<span id="texto-video">VÍDEO PRESENTACIÓN</span>
+								<a href="#" class="big-link boton-contacto" data-reveal-id="myModal"> </a>
+							</div>
+							<div id="imag-logo-phone">
+								<a href="index.html">
+									<img src="images/logo.png" id="imagen-logo-phone"/>
+								</a>
+							</div>
+							<div id="buscador-phone" align="center">
+								<input class="search-input" placeholder="Buscar" />
+								<button class="boton-lupa"> </button>
+							</div>
 
-                        </div>
+						</div>
+						<div id="myModal" class="reveal-modal">
 
-                        <div id="buscar-ficha">
-                            <div id="buscador" align="right">
-                                <input class="search-input" placeholder="Buscar" /> <button class="boton-buscar">Buscar</button>
-                            </div>
-                        </div>
-                        <div class="header-barra-mobile"></div>
-                        <h2 class="ficha-titulo">Ficha Técnica</h2>
+							<img class="icon-imprimir" src="images/imprimir.png" />
+							<a href="mailto:direccion@correo.com?subject=Compartiendo%20Tysabri&reg;&body=Hola,%20quiero%20compartir%20contigo%20este%20enlace%20de%20acceso%20a%20la%20adaptación%20interactiva%20multiplataforma%20de%20la%20ficha%20técnica%20de%20Tysabri®%20desarrollada%20por%20Biogen%20Idec.">
+								<img class="icon-correo" src="images/correo.png" />
+							</a>
+							<img class="icon-google-plus" src="images/google-plus.png"/>
+							<img class="icon-facebook-like" src="images/facebook-like.png"/>
+						</div>
+                        <div id="modalVideo" class="reveal-modal">
+							<table id="tablemodal" width="65%">
+								<tr>
+									<td>
+										<video id="video-telefono"  width="250" height="180"  controls>
+											<source src="video.mp4" type="video/mp4" />
+										</video>
+									</td>
+								</tr>
+							</table>
+						</div>                
+                                        
+						<div id="buscar-ficha">
+							<div id="buscador" align="right">
+								<input class="search-input" placeholder="Buscar" />
+								<button class="boton-buscar">Buscar</button>
+							</div>
+						</div>
+						<div class="header-barra-mobile"></div>
+						<h2 class="ficha-titulo">Ficha Técnica</h2>
 
-                        <ul class="accordion">
-                            <li>
-                                <a class="lista-elemento" href="#1"></a>
-                                <div></div>
+						<ul class="accordion">
+							<li>
+								<a class="lista-elemento" href="#1"></a>
+								<div></div>
 
-                            </li>
-                            <li>
-                                <a class="lista-elemento" href="#2"></a>
-                                <div></div>
+							</li>
+							<li>
+								<a class="lista-elemento" href="#2"></a>
+								<div></div>
 
-                            </li>
-                            <li>
-                                <a class="lista-elemento" href="#3"></a>
-                                <div></div>
+							</li>
+							<li>
+								<a class="lista-elemento" href="#3"></a>
+								<div></div>
 
-                            </li>
-                            <li>
+							</li>
+							<li>
 
-                                <a class="lista-elemento" href="#4"><div class="texto-titulo-lista">4. DATOS CLÍNICOS</div><span class="mas-menos"></span></a>
-                                <ul>	
-                                    <li>
-                                        <a class="lista-elemento" href="#4-1"></a>
-                                        <div></div>
+								<a class="lista-elemento" href="#4">
+									<div class="texto-titulo-lista">4. DATOS CLÍNICOS</div><span class="mas-menos"></span>
+								</a>
+								<ul>
+									<li>
+										<a class="lista-elemento" href="#4-1"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a  class="lista-elemento" href="#4-2"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a  class="lista-elemento" href="#4-2"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#4-3"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#4-3"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#4-4"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#4-4"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#4-5"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#4-5"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a  class="lista-elemento" href="#4-6"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a  class="lista-elemento" href="#4-6"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#4-7"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#4-7"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#4-8"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#4-8"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#4-9"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#4-9"></a>
+										<div></div>
 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="lista-elemento" href="#5"><div class="texto-titulo-lista">5. PROPIEDADES FARMACOLÓGICAS</div><span class="mas-menos"></span></a>
-                                <ul>	
-                                    <li>
-                                        <a class="lista-elemento" href="#5-1"></a>
-                                        <div></div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a class="lista-elemento" href="#5">
+									<div class="texto-titulo-lista">5. PROPIEDADES FARMACOLÓGICAS</div><span class="mas-menos"></span>
+								</a>
+								<ul>
+									<li>
+										<a class="lista-elemento" href="#5-1"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#5-2"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#5-2"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#5-3"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#5-3"></a>
+										<div></div>
 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="lista-elemento" href="#6"><div class="texto-titulo-lista">6. DATOS FARMACÉUTICOS</div><span class="mas-menos"></span></a>
-                                <ul>	
-                                    <li>
-                                        <a class="lista-elemento" href="#6-1"></a>
-                                        <div></div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a class="lista-elemento" href="#6">
+									<div class="texto-titulo-lista">6. DATOS FARMACÉUTICOS</div><span class="mas-menos"></span>
+								</a>
+								<ul>
+									<li>
+										<a class="lista-elemento" href="#6-1"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#6-2"></a>
-                                        <div></div>
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#6-3"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#6-2"></a>
+										<div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#6-3"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#6-4"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#6-4"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#6-5"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#6-5"></a>
+										<div></div>
 
-                                    </li>
-                                    <li>
-                                        <a class="lista-elemento" href="#6-6"></a>
-                                        <div></div>
+									</li>
+									<li>
+										<a class="lista-elemento" href="#6-6"></a>
+										<div></div>
 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="lista-elemento" href="#7"></a>
-                                <div></div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a class="lista-elemento" href="#7"></a>
+								<div></div>
 
-                            </li>
-                            <li>
-                                <a class="lista-elemento" href="#8"></a>
-                                <div></div>
-                            </li>
-                            <li>
-                                <a class="lista-elemento" href="#9"></a>
-                                <div></div>
-                            </li>
-                            <li>
-                                <a class="lista-elemento" href="#10"></a>
-                                <div></div>
-                            </li>
-                        </ul>
-                    </div><!-- #content-->
-                </div><!-- #container-->
+							</li>
+							<li>
+								<a class="lista-elemento" href="#8"></a>
+								<div></div>
+							</li>
+							<li>
+								<a class="lista-elemento" href="#9"></a>
+								<div></div>
+							</li>
+							<li>
+								<a class="lista-elemento" href="#10"></a>
+								<div></div>
+							</li>
+						</ul>
+					</div><!-- #content-->
+				</div><!-- #container-->
 
-            </section><!-- #middle-->
-            <footer id="footer-ficha">
-                <div class="footer-barra"></div>
-                <div id="footer-enlaces">
-                    <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
-                    <a class="footer-text" href="creditos.html"><b>Créditos</b> </a>
-                    <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
-                </div>
-                <div id="footer-enlaces-phone">
-                    <a class="footer-text" href="legal.html"><b>Aviso legal</b></a>
-                    <a class="footer-text" href="creditos.html"><b>Créditos </b></a>
-                    <a class="footer-text" href="contacto.html"><b>Contacto</b></a>
-                </div>
-            </footer>
+			</section><!-- #middle-->
+			<footer id="footer-ficha">
+				<div class="footer-barra"></div>
+				<div id="footer-enlaces">
+					<a class="footer-text" href="legal.html">
+						<b>Aviso legal</b>
+					</a>
+					<a class="footer-text" href="creditos.html">
+						<b>Créditos</b>
+					</a>
+					<a class="footer-text" href="contacto.html">
+						<b>Contacto</b>
+					</a>
+				</div>
+				<div id="footer-enlaces-phone">
+					<a class="footer-text" href="legal.html">
+						<b>Aviso legal</b>
+					</a>
+					<a class="footer-text" href="creditos.html">
+						<b>Créditos </b>
+					</a>
+					<a class="footer-text" href="contacto.html">
+						<b>Contacto</b>
+					</a>
+				</div>
+			</footer>
 
-        </div><!-- fin del wrapper -->
-               
-    </body>
+		</div><!-- fin del wrapper -->
+
+	</body>
 
 </html>

@@ -154,7 +154,7 @@ html, body{
     z-index: 1;
     width: 65%;
 }
-
+   
 #boton-presentacion {
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -162,11 +162,11 @@ html, body{
     float: left;
     width: 2em;
     height: 1.5em;
-    background-image: -webkit-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
-    background-image: -moz-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
-    background-image: -o-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
-    background-image: -ms-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
-    background-image: linear-gradient(to top, #549ad0, #3f91d0 50%, #3189cd);
+    background: -webkit-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
+    background: -moz-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
+    background: -o-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
+    background: -ms-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
+    background: linear-gradient(to top, #549ad0, #3f91d0 50%, #3189cd);
     border: solid 2px #eca154;
     text-align: center;
 }
@@ -703,6 +703,7 @@ a.resultado-titulo{
     background-image: -o-linear-gradient(bottom, #f30 40%, #fc5336 60%);
     background-image: -ms-linear-gradient(bottom, #f30 40%, #fc5336 60%);
     background-image: linear-gradient(to top, #f30 40%, #fc5336 60%);
+    
 }
 
 .boton-si
