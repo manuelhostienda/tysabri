@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="css/tablets.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="css/phone.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/video-js.css" />
 	</head>
 	<body>  
 		<div id="boxes-1">
@@ -17,18 +18,10 @@
 				<!-- close button is defined as close class -->
 				<div id="no-1" class="boton-no">No</div>
 				<div id="si-1" class="boton-si">Si</div>
-				<div class="disclaimer">La información contenida en la presente aplicación va destinada, exclusivamente,
-					a profesionales de la salud. Nunca deberá utilizarse la información disponible en la aplicación como
-					única fuente para la toma de decisiones de carácter médico. Biogen idec no será responsable,
-					en ningún caso, de las consecuencias derivadas de decisiones basadas, en la información disponible
-					en la aplicación. El profesional de la salud será quien, en cada caso, deba valorar toda la información,
-					o literatura científica disponible y tomar una decisión, con arreglo a sus conocimientos.La información
-					contenida en la presente aplicación va destinada, exclusivamente, a profesionales de la salud. Nunca
-					deberá utilizarse la información disponible en la aplicación como única fuente para la toma de
-					decisiones de carácter médico. Méderic Ediciones no será responsable, en ningún caso, de las
-					consecuencias derivadas de decisiones basadas, en la información disponible en la aplicación.
-					El profesional de la salud será quien, en cada caso, deba valorar toda la información, o
-					literatura científica disponible y tomar una decisión, con arreglo a sus conocimientos. </div>
+				<div class="disclaimer"> La informacion contenida en esta aplicación esta dirigida exclusivamente al profesional 
+                    sanitario. Tanto el acceso a dicha información como el uso que pueda hacerse del contenido de la misma será 
+                    responsabilidad exclusiva del usuario
+                </div>
 			</div>
 			<!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
 			<div id="mask-1"></div>
@@ -38,11 +31,11 @@
 		<div id="boxes-2">
 			<!-- #customize your modal window here -->
 			<div id="dialog-2" class="window" align="center">
-				<span class="titulo-modal">INTRODUCIR CONTRASEÑA</span>
-				<input type="password" placeholder="CONTRASEÑA" id="passwd" />
-				<div class="ayuda" style="display:none; color:red; font-family:helvetica">Contraseña incorrecta!.</div>
-				<div id="no-2" class="boton-no">CANCELAR</div>
-				<div id="si-2" class="boton-si">CONTINUAR</div>
+				<span class="titulo-modal">INTRODUCIR CÓDIGO</span>
+				<input type="password" placeholder="CÓDIGO DE ACCESO" id="passwd" />
+				<div class="ayuda" style="display:none; color:yellow; margin-bottom:1%; font-family:helvetica">Contraseña incorrecta!.</div>
+				<div id="no-2" class="boton-no">Cancelar</div>
+				<div id="si-2" class="boton-si">Continuar</div>
 				<div class="disclaimer">
 					Si no dispone del código, puede obtenerlo en <span class="enlace">www.biogenidec.es</span>
 				</div>
@@ -155,7 +148,7 @@
 							</div>
 							<div class="row-botones">
 								<a class="logo-tablet" href="index.html">
-									<img src="images/logo.png" width="55%" />
+									<img src="images/logo.png" />
 								</a>
 								<button class="boton-home" data-id="10" >
 									<span class="boton-home-text"> Fecha de la <br />revisión del texto</span>
@@ -170,9 +163,11 @@
 							<table id="tablemodal" width="65%">
 								<tr>
 									<td>
-										<video id="video-telefono"  width="250" height="180"  controls>
-											<source src="video.mp4" type="video/mp4" />
-										</video>
+										<video id="my_video_1" class="video-js vjs-default-skin"  width="275" height="180" controls>
+                                            <source src="video-tysabri.ogv" type="video/ogg" />
+                                            <source src="video-tysabri.webm" type='video/webm' />
+                                            <source src="video-tysabri.mp4" type="video/mp4" />
+										</video>   
 									</td>
 								</tr>
 							</table>
@@ -279,6 +274,7 @@
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/jquery.reveal.js"></script>
+		<script type="text/javascript" src="js/video.js"></script>
 
 		<script type="text/javascript">
 			app.initialize();
@@ -349,8 +345,8 @@
 					var winW = $(window).width();
 			
 					//Set the popup window to center
-					$(id).css('top', (winH / 2 - $(id).height() / 2) - (winH * 0.10));
-					$(id).css('left', winW / 2 - $(id).width() / 2);
+					$(id).css('top', (winH / 2 - $(id).height() / 2) - (winH * 0.05));
+					$(id).css('left', (winW / 2 - $(id).width() / 2)+ (winW * 0.05));
 			
 					//transition effect
 					$(id).fadeIn(500);

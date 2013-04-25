@@ -336,7 +336,7 @@ and (orientation : landscape) {
 
     /* Customize your modal window here, you can add background image too */
     #boxes-1 #dialog-1 {
-        width: 55%;
+        width: 40%;
         margin-left: 1%;
 
     }
@@ -356,9 +356,9 @@ and (orientation : landscape) {
     }
 
     .disclaimer{
-        margin-top: 16%;
+       margin-top: 15%;
         font-size: 0.9em;
-
+       
     }
 
     /****************************VENTANA MODAL introducir contraseña***************/
@@ -380,12 +380,13 @@ and (orientation : landscape) {
 
     /* Customize your modal window here, you can add background image too */
     #boxes-2 #dialog-2 {
-        width: 45%;
+       
     }
 
     #dialog-2 span.titulo-modal{
         font-family:"helvetica";
-        font-size: 1em;
+        font-size: 1.2em;
+
         color: #fff;
         text-shadow: 0 -2px rgba(0,0,0,.8);
         margin-top: 0%;
@@ -393,15 +394,14 @@ and (orientation : landscape) {
 
     #dialog-2 div.boton-no
     {
-        font-size: 1.5em;
-            margin-right: 24%;
-
+        font-size: 1.2em;
+        margin-right: 9%;
+width: 45%;
     }
 
     #dialog-2 .boton-si
     {
-        font-size: 1.4em;
-
+       font-size: 1.2em;
     }
 
     #dialog-2 div.disclaimer {
@@ -714,8 +714,12 @@ and (orientation : portrait){
     .logo-tablet{
         display: block;
         top: 0%;
-        left: -5%;
+        left: 0%;
         position: absolute;
+    }
+    
+    .logo-tablet > img {
+        width: 70%;
     }
 
 
@@ -754,9 +758,8 @@ and (orientation : portrait){
 
     /* Customize your modal window here, you can add background image too */
     #boxes-1 #dialog-1 {
-       width: 60%;
-       
-margin-top: 0%;
+      width: 56%;
+    margin-top: 0%;
     }
 
     #dialog-1 h2{
@@ -786,7 +789,7 @@ margin-top: 0%;
 
     #dialog-2 div.boton-no
     {
-        margin-right: 24%;
+       margin-right: 19%;
     }
    /****************************BARRA SOCIAL**********************************/
     .barra-social{
@@ -822,5 +825,7 @@ margin-top: 0%;
     .icon-facebook-like{
         width: 72px;
     }
+    
+    
 
 }

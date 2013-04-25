@@ -63,10 +63,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="busqueda.html" />
+    <Content Include="css\video-js.css" />
     <Content Include="ficha.pdf" />
     <Content Include="images\correo.png" />
     <Content Include="images\imprimir.png" />
-    <Content Include="video.mp4" />
+    <Content Include="js\video.js" />
+    <Content Include="video-tysabri.mp4" />
+    <Content Include="video-tysabri.ogv" />
+    <Content Include="video-tysabri.webm" />
     <Content Include="contacto.html" />
     <Content Include="creditos.html" />
     <Content Include="css\phone.css" />

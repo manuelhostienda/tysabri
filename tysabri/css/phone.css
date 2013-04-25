@@ -248,7 +248,6 @@
 	}
 	#logo-side
 	{
-
 		width: 30%;
 	}
 
@@ -259,15 +258,7 @@
 		width: 100%;
 		height: 3.5em;
 		height: 3.5em;
-		-webkit-border-radius: 21px 21px 203px 203px/21px 21px 14px 14px;
-		-moz-border-radius: 21px 21px 203px 203px/21px 21px 14px 14px;
-		border-radius: 21px 21px 203px 203px/21px 21px 14px 14px;
 		border: solid 2px #eca154;
-		background-image: -webkit-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
-		background-image: -moz-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
-		background-image: -o-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
-		background-image: -ms-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
-		background-image: linear-gradient(to top, #549ad0, #3f91d0 50%, #3189cd);
 	}
 
 	.boton-home-text
@@ -512,8 +503,6 @@
 	#boxes-1 #dialog-1
 	{
 		width: 85%;
-		margin-left: -3%;
-		height: 350px;
 	}
 
 	#dialog-1 span.titulo-modal
@@ -540,7 +529,7 @@
 		margin-top: 15%;
 		font-size: 0.9em;
 		overflow: auto;
-		height: 275px;
+margin-bottom: 2%;
 	}
 
 	/****************************VENTANA MODAL introducir contraseña***************/
@@ -568,14 +557,16 @@
 
 	#dialog-2 div.boton-no
 	{
-
-		font-size: 0.9em;
-		margin: 0% 10% 0% 5%
+font-size: 0.9em;
+margin: 0% 4% 0% 3%;
+width: 45%;
+        padding: 3% 0% 3% 0%;
 	}
 
 	#dialog-2 .boton-si
 	{
 		font-size: 0.9em;
+        padding: 3% 0% 3% 0%;
 	}
 
 	#dialog-2 > input
@@ -586,6 +577,10 @@
 	#dialog-2 div.disclaimer
 	{
 		height: 20%;
+        width: 93%;
+        margin-top: 15%;
+        text-align: justify;
+
 	}
 	/******************************************************************************/
 

@@ -647,7 +647,7 @@ a.resultado-titulo{
     position:fixed;
     display:none;
     z-index:9999;
-    padding: 2%;
+    padding: 1%;
 }
 
 
@@ -658,7 +658,7 @@ a.resultado-titulo{
     -moz-border-radius: 12px 13px 13px 12px/13px 13px 12px 12px;
     border-radius: 12px 13px 13px 12px/13px 13px 12px 12px;
     background-color: rgba(83,148,210,.9);
-    border: solid 4px #eca154;
+    border: solid 2px #ECA154;
     background-image: -webkit-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
     background-image: -moz-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
     background-image: -o-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
@@ -682,12 +682,12 @@ a.resultado-titulo{
     cursor:pointer;
     float: left;
     margin-right: 25%;
-    width: 35%;
-    padding:1% 0% 1% 0%;
+    width: 40%;
+    padding:2% 0% 2% 0%;
     display: block;
     float: left;
-    margin-right: 13%;
-    margin-left: 8%;
+    margin-right: 7%;
+    margin-left: 6%;
     text-align: center;
     font-size: 1.4em;
     color: #fff;
@@ -696,25 +696,25 @@ a.resultado-titulo{
     -webkit-border-radius: 7px 6px 6px 7px/6px;
     -moz-border-radius: 7px 6px 6px 7px/6px;
     border-radius: 7px 6px 6px 7px/6px;
-    background-color: rgba(129,133,139,0);
-    border: solid 2px #634329;
-    background-image: -webkit-linear-gradient(bottom, #f30 40%, #fc5336 60%);
-    background-image: -moz-linear-gradient(bottom, #f30 40%, #fc5336 60%);
-    background-image: -o-linear-gradient(bottom, #f30 40%, #fc5336 60%);
-    background-image: -ms-linear-gradient(bottom, #f30 40%, #fc5336 60%);
-    background-image: linear-gradient(to top, #f30 40%, #fc5336 60%);
+   background-color: rgba(129,133,139,0);
+	border: solid 1px #eca154;
+	background-image: -webkit-linear-gradient(bottom, #cd2900 40%, #d33318 60%);
+	background-image: -moz-linear-gradient(bottom, #cd2900 40%, #d33318 60%);
+	background-image: -o-linear-gradient(bottom, #cd2900 40%, #d33318 60%);
+	background-image: -ms-linear-gradient(bottom, #cd2900 40%, #d33318 60%);
+	background-image: linear-gradient(to top, #cd2900 40%, #d33318 60%);
     
 }
 
 .boton-si
 {
     cursor:pointer;
-    width: 35%;
+    width: 40%;
 
     display: block;
     text-align: center;
     font-size: 1.4em;
-    padding:1% 0% 1% 0%;
+    padding:2% 0% 2% 0%;
     float: left;
     color: #fff;
     text-shadow: 0 -2px rgba(0,0,0,.8);
@@ -723,7 +723,7 @@ a.resultado-titulo{
     -moz-border-radius: 6px;
     border-radius: 6px;
     background-color: rgba(129,133,139,0);
-    border: solid 2px #eca154;
+    border: solid 1px #eca154;
     background-image: -webkit-linear-gradient(bottom, #0a233a 40%, #174a7a 60%);
     background-image: -moz-linear-gradient(bottom, #0a233a 40%, #174a7a 60%);
     background-image: -o-linear-gradient(bottom, #0a233a 40%, #174a7a 60%);
@@ -739,10 +739,11 @@ a.resultado-titulo{
     text-align: justify;
     clear: both;
     background: white;
-    border: solid 4px #eca154;
+    border: solid 2px #eca154;
     border-radius: 12px 13px 13px 12px/13px 13px 12px 12px;
-    padding: 1%;
+    padding: 2%;
     overflow: auto;
+     width: 85%;
 }
 
 /****************************VENTANA MODAL introducir contraseña*****************/
@@ -764,13 +765,13 @@ a.resultado-titulo{
 
 /* Customize your modal window here, you can add background image too */
 #boxes-2 #dialog-2 {
-    width: 30%;
+    width: 40%;
     margin-left: -5%;
     -webkit-border-radius: 12px 13px 13px 12px/13px 13px 12px 12px;
     -moz-border-radius: 12px 13px 13px 12px/13px 13px 12px 12px;
     border-radius: 12px 13px 13px 12px/13px 13px 12px 12px;
     background-color: rgba(83,148,210,.9);
-    border: solid 4px #eca154;
+    border: solid 2px #eca154;
     background-image: -webkit-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
     background-image: -moz-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
     background-image: -o-linear-gradient(bottom, #549ad0, #3f91d0 50%, #3189cd);
@@ -789,17 +790,14 @@ a.resultado-titulo{
 #dialog-2 div.boton-no
 {
     font-size: 1.4em;
-
-    padding: 0.2em;
     margin-left: 0%;
-    margin-right: 23%;
+    margin-right: 9%;
 }
 
 #dialog-2 .boton-si
 {
     font-size: 1.4em;
-
-    padding: 0.2em;
+    width: 45%;
 }
 
 #dialog-2 > input {
@@ -812,12 +810,14 @@ a.resultado-titulo{
     box-shadow: inset 0 2px 6px rgba(0,0,0,.6);
     border: solid 2px #536986;
     width: 95%;
-    padding: 2% 2% 2% 2%;
+    padding: 3% 2% 3% 2%;
     margin-bottom: 3%;
 }
 
 #dialog-2 div.disclaimer {
-    margin-top: 15%;
+  margin-top: 15%;
+width: 96%;
+text-align: center;
 }
 
 .MsoNormalTable{
@@ -873,6 +873,10 @@ right: 24%;
 .icon-facebook-like{
     
 }
+
+    .disclaimer > p{
+        margin-top: 0.3em;
+    }
 
 @media only screen
 and (min-width : 361px)
@@ -1058,6 +1062,8 @@ and (max-width : 767px){
     .icon-imprimir {
 width: 24px;
 }
+    
+
     
     
 }
