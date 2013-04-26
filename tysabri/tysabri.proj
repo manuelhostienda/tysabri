@@ -69,8 +69,6 @@
     <Content Include="images\imprimir.png" />
     <Content Include="js\video.js" />
     <Content Include="video-tysabri.mp4" />
-    <Content Include="video-tysabri.ogv" />
-    <Content Include="video-tysabri.webm" />
     <Content Include="contacto.html" />
     <Content Include="creditos.html" />
     <Content Include="css\phone.css" />

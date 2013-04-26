@@ -18,7 +18,7 @@
 
 	#wrapper
 	{
-		min-width: 100px;
+		min-width: 320px;
 		margin: 0 auto;
 	}
 
@@ -161,7 +161,7 @@
 		text-align: center;
 		margin-right: 2%;
 		margin-top: 3%;
-		margin-left: 12%;
+		margin-left: 10%;
 	}
 
 	#boton-presentacion-phone > img
@@ -222,9 +222,11 @@
 		border-radius: 15px 16px 16px 15px/15px 15px 16px 16px;
 		background: #ffffff url(../images/lupa.png) 5px no-repeat;
 		padding-left: 8%;
-		width: 50%;
+		width: 56%;
 		margin-top: 3%;
 		margin-right: 2%;
+        margin-left: 10%;
+        height:20px;
 	}
 
 	#buscador > button
@@ -334,7 +336,7 @@
 		height: 42px;
 		float: right;
 		margin-top: 1.5%;
-		margin-right: 4%;
+		margin-right: 10%;
 	}
 
 	.boton-lupa
@@ -354,7 +356,7 @@
 	#imagen-logo-phone
 	{
 		width: 40%;
-		margin: 4% 0% 2% 5%;
+		margin: 4% 0% 2% 8%;
 	}
 
 	.reveal-modal-bg
