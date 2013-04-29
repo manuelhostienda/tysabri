@@ -7,7 +7,7 @@
     <ProjectName>tysabri</ProjectName>
     <IsRunnable>true</IsRunnable>
     <TemplateAppName>Cordova240</TemplateAppName>
-    <AndroidPermissions>android.permission.INTERNET;android.permission.ACCESS_NETWORK_STATE;android.permission.BROADCAST_STICKY</AndroidPermissions>
+    <AndroidPermissions>android.permission.INTERNET;android.permission.WRITE_EXTERNAL_STORAGE;android.permission.ACCESS_NETWORK_STATE;android.permission.BROADCAST_STICKY</AndroidPermissions>
     <DeviceOrientations>Portrait;Landscape</DeviceOrientations>
     <iOSStatusBarStyle>Default</iOSStatusBarStyle>
     <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
@@ -66,6 +66,7 @@
     <Content Include="css\video-js.css" />
     <Content Include="ficha.pdf" />
     <Content Include="images\correo.png" />
+    <Content Include="images\ico-redes-sociales.png" />
     <Content Include="images\imprimir.png" />
     <Content Include="js\video.js" />
     <Content Include="video-tysabri.mp4" />
@@ -88,7 +89,6 @@
     <Content Include="images\google-plus.png" />
     <Content Include="images\ico-info.png" />
     <Content Include="images\ico-lupa.png" />
-    <Content Include="images\ico-redes-sociales.png" />
     <Content Include="images\inicio.png" />
     <Content Include="images\loading.gif" />
     <Content Include="images\logo.png" />
