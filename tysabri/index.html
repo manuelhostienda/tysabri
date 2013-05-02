@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="css/tablets.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="css/phone.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="css/video-js.css" />
+
 	</head>  
 	<body>  
 		<div id="boxes-1">
@@ -22,7 +22,7 @@
                     sanitario. Tanto el acceso a dicha información como el uso que pueda hacerse del contenido de la misma será 
                     responsabilidad exclusiva del usuario
                 </div>
-			</div>
+			</div>   
 			<!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
 			<div id="mask-1"></div>
 		</div>
@@ -107,9 +107,9 @@
 
 						<div id="botones-tablet">
 							<div class="row-botones">
-								<div class="boton-home" data-id="1">
+								<button class="boton-home" data-id="1">
 									<span class="boton-home-text">Nombre <br />del medicamento</span>
-								</div>
+								</button>
 
 								<button class="boton-home" data-id="2">
 									<span class="boton-home-text">Composición cualitativa<br />y cuantitativa</span>
@@ -162,8 +162,9 @@
 							<table id="tablemodal" width="65%">
 								<tr>
 									<td>
-										<video id="my_video_1" class="video-js vjs-default-skin"  width="275" height="180" controls>
-                                            <source src="video-tysabri.mp4" type="video/mp4" />
+										<video id="video" width="275" height="180" controls>
+                                            <source src="video.mp4" type="video/mp4" />
+                                     
 										</video>   
 									</td>
 								</tr>
@@ -171,7 +172,6 @@
 						</div>
 						<div class="header-barra-phone"></div>
 						<div id="botones-phone">
-
 							<button class="boton-home" data-id="1">
 								<span class="boton-home-text">Nombre <br />del medicamento</span>
 							</button>
@@ -271,7 +271,6 @@
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/jquery.reveal.js"></script>
-		<script type="text/javascript" src="js/video.js"></script>
 
 		<script type="text/javascript">
 			app.initialize();
@@ -445,6 +444,7 @@
 						window.open('./ficha.pdf', '_blank', 'location=no');
 					} 
 				});
+                
 			});      
 		</script>
 	</body>

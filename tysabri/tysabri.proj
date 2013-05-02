@@ -10,7 +10,7 @@
     <AndroidPermissions>android.permission.INTERNET;android.permission.WRITE_EXTERNAL_STORAGE;android.permission.ACCESS_NETWORK_STATE;android.permission.BROADCAST_STICKY</AndroidPermissions>
     <DeviceOrientations>Portrait;Landscape</DeviceOrientations>
     <iOSStatusBarStyle>Default</iOSStatusBarStyle>
-    <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
+    <AndroidHardwareAcceleration>true</AndroidHardwareAcceleration>
     <BundleVersion>1.0</BundleVersion>
     <iOSDisplayName />
     <iOSDeviceFamily>1;2</iOSDeviceFamily>
@@ -63,13 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="busqueda.html" />
-    <Content Include="css\video-js.css" />
     <Content Include="ficha.pdf" />
     <Content Include="images\correo.png" />
     <Content Include="images\ico-redes-sociales.png" />
     <Content Include="images\imprimir.png" />
-    <Content Include="js\video.js" />
-    <Content Include="video-tysabri.mp4" />
+    <Content Include="video.mp4" />
     <Content Include="contacto.html" />
     <Content Include="creditos.html" />
     <Content Include="css\phone.css" />

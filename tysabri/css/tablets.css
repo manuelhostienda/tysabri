@@ -266,6 +266,9 @@ and (orientation: landscape)
 		text-shadow: 0 1px rgba(0, 0, 0, .35);
 		text-transform: uppercase;
 	}
+        .header-barra{
+        display:none;
+    }
 
 	.row-botones
 	{
@@ -808,7 +811,9 @@ and (orientation: portrait)
     
 	.logo-tablet > img
 	{
-		width: 70%;
+		width: 50%;
+margin-right: 25%;
+        margin-top:5%
 	}
 
 	/***************************CREDITOS *********************************/
@@ -931,6 +936,11 @@ and (orientation: portrait)
 	.icon-facebook-like
 	{
 		width: 72px;
+	}
+    
+	.header-barra
+	{
+		display: none;
 	}
 
 }
