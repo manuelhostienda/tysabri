@@ -393,9 +393,9 @@
 		-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
 		-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
 		-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
-		margin-left: 6%;
-		margin-right: 2%;
-		width: 80%;
+		margin-left: 4%;
+        margin-top: 0%;
+		width: 82%;
 	}
 
 	.reveal-modal.small { width: 200px; margin-left: -140px; }
@@ -625,10 +625,10 @@
     
 	.icon-correo
 	{
-		width: 45px;
+		width: 44px;
 		margin-left: 0.4em;
 	}
-    
+       
 	.icon-google-plus
 	{
 		width: 45px;
@@ -637,7 +637,7 @@
     
 	.icon-facebook-like
 	{
-		width: 105px;
+		width: 100px;
 		margin-left: 0.4em;
 	}
     

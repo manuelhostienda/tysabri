@@ -63,7 +63,7 @@
 							</div>
 							<div id="buscador-phone">
 								<input class="search-input" placeholder="Buscar" />
-								
+
 							</div>
 
 						</div>
@@ -76,18 +76,40 @@
 							<img class="icon-google-plus" src="images/google-plus.png"/>
 							<img class="icon-facebook-like" src="images/facebook-like.png"/>
 						</div>
-                        <div id="modalVideo" class="reveal-modal">
+						<div id="modalVideo" class="reveal-modal">
+							<div id="mask-1"></div>
+							<div class="close-reveal-modal">
+								<img src="images/icon-close.png" />
+							</div>
 							<table id="tablemodal" width="65%">
 								<tr>
 									<td>
-										<video  width="250" height="180"  controls>
+										<video id="video" width="250" height="180" controls>
 											<source src="video.mp4" type="video/mp4" />
+
 										</video>
 									</td>
 								</tr>
 							</table>
-						</div>                
-                                        
+						</div>
+
+						<div id="modalVideo-tablet" class="reveal-modal">
+							<div id="mask-1"></div>
+							<div class="close-reveal-modal">
+								<img src="images/icon-close.png" />
+							</div>
+							<table id="tablemodal" width="65%">
+								<tr>
+									<td>
+										<video id="video" width="500" height="240" controls>
+											<source src="video.mp4" type="video/mp4" />
+
+										</video>
+									</td>
+								</tr>
+							</table>
+						</div>
+
 						<div id="buscar-ficha">
 							<div id="buscador" align="right">
 								<input class="search-input" placeholder="Buscar" />

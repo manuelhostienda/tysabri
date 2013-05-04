@@ -1,90 +1,95 @@
 /*
- * jQuery Reveal Plugin 1.0
- * www.ZURB.com
- * Copyright 2010, ZURB
- * Free to use under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
+* jQuery Reveal Plugin 1.0
+* www.ZURB.com
+* Copyright 2010, ZURB
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
 */
 
 
 (function($) {
-
-/*---------------------------
- Defaults for Reveal
-----------------------------*/
-	 
-/*---------------------------
- Listener for data-reveal-id attributes
-----------------------------*/
-
+	/*---------------------------
+	Defaults for Reveal
+	----------------------------*/
+	/*---------------------------
+	Listener for data-reveal-id attributes
+	----------------------------*/
 	$('a[data-reveal-id]').live('click', function(e) {
 		e.preventDefault();
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+			
+		//Set height and width to mask to fill up the whole screen
+		$('#mask-1').css({'width': maskWidth, 'height': maskHeight});
+			
+		//transition effect
+		$('#mask-1').fadeIn(300);
+		$('#mask-1').fadeTo("fast", 0.6);
+        
 		var modalLocation = $(this).attr('data-reveal-id');
-		$('#'+modalLocation).reveal($(this).data());
+		$('#' + modalLocation).reveal($(this).data());
 	});
 
-/*---------------------------
- Extend and Execute
-----------------------------*/
+	/*---------------------------
+	Extend and Execute
+	----------------------------*/
 
-    $.fn.reveal = function(options) {
-        
-        
-        var defaults = {  
-	    	animation: 'fadeAndPop', //fade, fadeAndPop, none
-		    animationspeed: 300, //how fast animtions are
-		    closeonbackgroundclick: true, //if you click background will modal close?
-		    dismissmodalclass: 'close-reveal-modal' //the class of a button or element that will close an open modal
-    	}; 
+	$.fn.reveal = function(options) {
+		var defaults = {  
+			animation: 'fadeAndPop', //fade, fadeAndPop, none
+			animationspeed: 300, //how fast animtions are
+			closeonbackgroundclick: false, //if you click background will modal close?
+			dismissmodalclass: 'close-reveal-modal' //the class of a button or element that will close an open modal
+		}; 
     	
-        //Extend dem' options
-        var options = $.extend({}, defaults, options); 
+		//Extend dem' options
+		var options = $.extend({}, defaults, options); 
 	
-        return this.each(function() {
-        
-/*---------------------------
- Global Variables
-----------------------------*/
-        	var modal = $(this),
-        		topMeasure  = parseInt(modal.css('top')),
-				topOffset = modal.height() + topMeasure,
-          		locked = false,
-				modalBG = $('.reveal-modal-bg');
+		return this.each(function() {
+			/*---------------------------
+			Global Variables
+			----------------------------*/
+			var modal = $(this),
+			topMeasure = parseInt(modal.css('top')),
+			topOffset = modal.height() + topMeasure,
+			locked = false,
+			modalBG = $('.reveal-modal-bg');
 
-/*---------------------------
- Create Modal BG
-----------------------------*/
-			if(modalBG.length == 0) {
+			/*---------------------------
+			Create Modal BG
+			----------------------------*/
+			if (modalBG.length == 0) {
 				modalBG = $('<div class="reveal-modal-bg" />').insertAfter(modal);
 			}		    
      
-/*---------------------------
- Open & Close Animations
-----------------------------*/
+			/*---------------------------
+			Open & Close Animations
+			----------------------------*/
 			//Entrance Animations
 			modal.bind('reveal:open', function () {
-			  modalBG.unbind('click.modalEvent');
+				modalBG.unbind('click.modalEvent');
 				$('.' + options.dismissmodalclass).unbind('click.modalEvent');
-				if(!locked) {
+				if (!locked) {
 					lockModal();
-					if(options.animation == "fadeAndPop") {
-						modal.css({'top': $(document).scrollTop()-topOffset, 'opacity' : 0, 'visibility' : 'visible'});
-						modalBG.fadeIn(options.animationspeed/2);
-						modal.delay(options.animationspeed/2).animate({
-							"top": $(document).scrollTop()+topMeasure + 'px',
+					if (options.animation == "fadeAndPop") {
+						modal.css({'top': $(document).scrollTop() - topOffset, 'opacity' : 0, 'visibility' : 'visible'});
+						modalBG.fadeIn(options.animationspeed / 2);
+						modal.delay(options.animationspeed / 2).animate({
+							"top": $(document).scrollTop() + topMeasure + 'px',
 							"opacity" : 1
-						}, options.animationspeed,unlockModal());	
-                         $("#plus-one-phone").css("display","block");
+						}, options.animationspeed, unlockModal());	
+						$("#plus-one-phone").css("display", "block");
 					}
-					if(options.animation == "fade") {
-						modal.css({'opacity' : 0, 'visibility' : 'visible', 'top': $(document).scrollTop()+topMeasure});
-						modalBG.fadeIn(options.animationspeed/2);
-						modal.delay(options.animationspeed/2).animate({
+					if (options.animation == "fade") {
+						modal.css({'opacity' : 0, 'visibility' : 'visible', 'top': $(document).scrollTop() + topMeasure});
+						modalBG.fadeIn(options.animationspeed / 2);
+						modal.delay(options.animationspeed / 2).animate({
 							"opacity" : 1
-						}, options.animationspeed,unlockModal());					
+						}, options.animationspeed, unlockModal());					
 					} 
-					if(options.animation == "none") {
-						modal.css({'visibility' : 'visible', 'top':$(document).scrollTop()+topMeasure});
+					if (options.animation == "none") {
+						modal.css({'visibility' : 'visible', 'top':$(document).scrollTop() + topMeasure});
 						modalBG.css({"display":"block"});	
 						unlockModal()				
 					}
@@ -94,20 +99,20 @@
 
 			//Closing Animation
 			modal.bind('reveal:close', function () {
-			  if(!locked) {
+				if (!locked) {
 					lockModal();
-					if(options.animation == "fadeAndPop") {
+					if (options.animation == "fadeAndPop") {
 						modalBG.delay(options.animationspeed).fadeOut(options.animationspeed);
 						modal.animate({
-							"top":  $(document).scrollTop()-topOffset + 'px',
+							"top":  $(document).scrollTop() - topOffset + 'px',
 							"opacity" : 0
-						}, options.animationspeed/2, function() {
+						}, options.animationspeed / 2, function() {
 							modal.css({'top':topMeasure, 'opacity' : 1, 'visibility' : 'hidden'});
 							unlockModal();
 						});
-                        $("#plus-one-phone").css("display","none");
+						$("#plus-one-phone").css("display", "none");
 					}  	
-					if(options.animation == "fade") {
+					if (options.animation == "fade") {
 						modalBG.delay(options.animationspeed).fadeOut(options.animationspeed);
 						modal.animate({
 							"opacity" : 0
@@ -116,7 +121,7 @@
 							unlockModal();
 						});					
 					}  	
-					if(options.animation == "none") {
+					if (options.animation == "none") {
 						modal.css({'visibility' : 'hidden', 'top' : topMeasure});
 						modalBG.css({'display' : 'none'});	
 					}		
@@ -124,39 +129,39 @@
 				modal.unbind('reveal:close');
 			});     
    	
-/*---------------------------
- Open and add Closing Listeners
-----------------------------*/
-        	//Open Modal Immediately
-    	modal.trigger('reveal:open')
+			/*---------------------------
+			Open and add Closing Listeners
+			----------------------------*/
+			//Open Modal Immediately
+			modal.trigger('reveal:open')
 			
 			//Close Modal Listeners
 			var closeButton = $('.' + options.dismissmodalclass).bind('click.modalEvent', function () {
-			  modal.trigger('reveal:close')
+				modal.trigger('reveal:close');
+				$('#mask-1').hide();
 			});
 			
-			if(options.closeonbackgroundclick) {
+			if (options.closeonbackgroundclick) {
 				modalBG.css({"cursor":"pointer"})
 				modalBG.bind('click.modalEvent', function () {
-				  modal.trigger('reveal:close')
+					modal.trigger('reveal:close')
 				});
 			}
 			$('body').keyup(function(e) {
-        		if(e.which===27){ modal.trigger('reveal:close'); } // 27 is the keycode for the Escape key
+				if (e.which===27) {
+					modal.trigger('reveal:close');
+				} // 27 is the keycode for the Escape key
 			});
 			
-			
-/*---------------------------
- Animations Locks
-----------------------------*/
+			/*---------------------------
+			Animations Locks
+			----------------------------*/
 			function unlockModal() { 
 				locked = false;
 			}
 			function lockModal() {
 				locked = true;
 			}	
-			
-        });//each call
-    }//orbit plugin call
+		});//each call
+	}//orbit plugin call
 })(jQuery);
-        

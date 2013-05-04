@@ -111,6 +111,11 @@ and (orientation: landscape)
 	{
 		width: 76%;
 	}
+    
+	#footer-enlaces
+	{
+		padding-left: 4.5em;
+	}
 
 	.footer-barra
 	{
@@ -266,9 +271,10 @@ and (orientation: landscape)
 		text-shadow: 0 1px rgba(0, 0, 0, .35);
 		text-transform: uppercase;
 	}
-        .header-barra{
-        display:none;
-    }
+	.header-barra
+	{
+		display: none;
+	}
 
 	.row-botones
 	{
@@ -487,7 +493,29 @@ and (orientation: landscape)
 	{
 		width: 90px;
 	}
-
+    
+	.modal-video
+	{
+		display: none;
+	}
+    
+	.reveal-modal
+	{
+		margin-left: 10%;
+		width: 50%
+	}
+    
+	.close-reveal-modal
+	{
+		margin-top: -7%;
+		margin-right: -7%;
+	}
+    
+	.close-reveal-modal img
+	{
+		width: 40px;
+	}
+    
 }
 
 /* ipad portrait */
@@ -587,6 +615,11 @@ and (orientation: portrait)
 	#footer
 	{
 		width: 80%;
+	}
+    
+	#footer-enlaces
+	{
+		padding-left: 4em;
 	}
 
 	#footer-ficha
@@ -812,8 +845,8 @@ and (orientation: portrait)
 	.logo-tablet > img
 	{
 		width: 50%;
-margin-right: 25%;
-        margin-top:5%
+		margin-right: 25%;
+		margin-top: 5%
 	}
 
 	/***************************CREDITOS *********************************/
@@ -941,6 +974,28 @@ margin-right: 25%;
 	.header-barra
 	{
 		display: none;
+	}
+    
+	.modal-video
+	{
+		display: none;
+	}
+    
+	.reveal-modal
+	{
+		margin-left: 5%;
+		width: 66%
+	}
+    
+	.close-reveal-modal
+	{
+		margin-top: -7%;
+		margin-right: -7%;
+	}
+    
+	.close-reveal-modal img
+	{
+		width: 40px;
 	}
 
 }

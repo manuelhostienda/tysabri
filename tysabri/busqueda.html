@@ -62,12 +62,12 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			
+
 			<header id="header">
 				<img  src="images/top.png"/>
 			</header><!-- #header-->
 			<section id="middle">
-				
+
 				<div id="container">
 					<aside id="sideLeft">
 						<a href="index.html" >
@@ -88,29 +88,51 @@
 							<div id="imag-logo-phone">
 								<a href="index.html" >
 									<a href="index.html">
-									<img src="images/logo.png" id="imagen-logo-phone"/>
-								</a>
+										<img src="images/logo.png" id="imagen-logo-phone"/>
+									</a>
 								</a>
 							</div>
 							<div id="buscador-phone">
 								<input class="search-input" placeholder="Buscar" />
-				
+
 							</div>
-						
+
 						</div>
 						<div id="modalVideo" class="reveal-modal">
+							<div id="mask-1"></div>
+							<div class="close-reveal-modal">
+								<img src="images/icon-close.png" />
+							</div>
 							<table id="tablemodal" width="65%">
 								<tr>
 									<td>
-										<video id="video-telefono"  width="250" height="180"  controls>
+										<video id="video" width="250" height="180" controls>
 											<source src="video.mp4" type="video/mp4" />
+
 										</video>
 									</td>
 								</tr>
 							</table>
 						</div>
-                                        
-							<div id="myModal" class="reveal-modal">
+
+						<div id="modalVideo-tablet" class="reveal-modal">
+							<div id="mask-1"></div>
+							<div class="close-reveal-modal">
+								<img src="images/icon-close.png" />
+							</div>
+							<table id="tablemodal" width="65%">
+								<tr>
+									<td>
+										<video id="video" width="500" height="240" controls>
+											<source src="video.mp4" type="video/mp4" />
+
+										</video>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div id="myModal" class="reveal-modal">
 
 							<img class="icon-imprimir" src="images/imprimir.png" />
 							<a href="mailto:direccion@correo.com?subject=Compartiendo%20Tysabri&reg;&body=Hola,%20quiero%20compartir%20contigo%20este%20enlace%20de%20acceso%20a%20la%20adaptación%20interactiva%20multiplataforma%20de%20la%20ficha%20técnica%20de%20Tysabri®%20desarrollada%20por%20Biogen%20Idec.">
@@ -130,7 +152,7 @@
 						<div id="busqueda-temporal" style="display:none;"></div>
 					</div><!-- #content-->
 				</div><!-- #container-->
-			
+
 			</section><!-- #middle-->
 			<footer id="footer-ficha">
 				<span class="biogen-elan"></span>
