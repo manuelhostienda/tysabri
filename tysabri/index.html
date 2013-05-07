@@ -151,9 +151,7 @@
 								<button class="boton-home" data-id="10" >
 									<span class="boton-home-text"> Fecha de la <br />revisión del texto</span>
 								</button>
-								<a href="http://biogenidec.es">
-									<span class="biogen-elan"></span>
-								</a>
+								<span class="biogen-elan"></span>
 							</div>
 
 						</div>
@@ -166,7 +164,7 @@
 							<table id="tablemodal" width="65%">
 								<tr>
 									<td>
-										<video id="video" width="250" height="180" poster="images/video.jpg" controls>
+										<video id="video-phone" width="250" height="180" poster="images/video.jpg" controls>
 											<source src="video.mp4" type="video/mp4" />
 										</video>
 									</td>  
@@ -182,9 +180,8 @@
 							<table id="tablemodal" width="65%">
 								<tr>
 									<td>
-										<video id="video" width="500" height="240" controls>
+										<video id="video-tablet" width="500" height="240" controls>
 											<source src="video.mp4" type="video/mp4" />
-
 										</video>
 									</td>
 								</tr>
@@ -299,7 +296,7 @@
 			app.initialize();
 			$(document).ready(function() {
 				/*******************************LOGICA DE SINCRONIZACION DE INFORMACION*******************************/
-				if (debeActualizar()) {
+                if (debeActualizar()) {
 					if (comprobarConexion()) {
 						descargarLibro();
 					}
@@ -446,7 +443,6 @@
 			
 				$('#myButton').click(function(e) {
 					e.preventDefault();
-			
 					$('#myModal').reveal();
 				});
 			
@@ -467,6 +463,10 @@
 						window.open('./ficha.pdf', '_blank', 'location=no');
 					} 
 				});
+                
+                $('.biogen-elan').click(function(){
+                    window.open('http://www.biogenidec.es', '_system');
+                });
 			});      
 		</script>
 	</body>

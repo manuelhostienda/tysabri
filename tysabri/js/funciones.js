@@ -22,15 +22,15 @@ $(document).ready(function() {
 		localStorage.setItem("apartado-abierto", id);
 		window.location = "ficha.html";
 	});
-    
-	$('a[href*="link_externo"]').click(function(event) {
+	
+	$('a[href*="#externo"]').click(function(event) {
 		event.preventDefault();
 		var ruta = $(this).attr('href') + "";
 		ruta = ruta.split('-');
-		console.log(ruta[1]);
-		window.open(ruta[1], '_system'); 
+        console.log(ruta[1]);
+		window.open(ruta[1], '_system');
 	});
-        
+    
 	function redireccionBusqueda(texto) {
 		if (texto != "") {
 			localStorage.setItem("texto-busqueda", texto);
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 //Retorna true o false si hay internet.
 function comprobarConexion() {
-	return false; 
+	return navigator.onLine; 
 }
 
 //Retorna true o false si hay soporte para local storage (validacion para navegadores viejos)
@@ -305,6 +305,7 @@ function cargarContenido(abrir) {
     
 		localStorage.setItem('apartado-abierto-busqueda', "");    
 	}
+ 
 	$('a[href*="#link"]').click(function() {
 		contenedor = $(this).closest('li');
 
@@ -344,6 +345,6 @@ function cargarContenido(abrir) {
 			$("body,html,document").animate({scrollTop: $('a[href=#' + id[1] + ']').offset().top}, 500);
 		}, 500);
 	});
-    
+ 
 	return true;
 }

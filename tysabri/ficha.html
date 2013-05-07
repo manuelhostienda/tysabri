@@ -15,30 +15,39 @@
 		<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/jquery.accordion.source.js"></script>
-		<script type="text/javascript" src="js/funciones.js">
-            
-		</script>
+		<script type="text/javascript" src="js/funciones.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+
 		<script type="text/javascript" src="js/jquery.reveal.js"></script>
 
 		<script type="text/javascript">
+			app.initialize();
 			$(document).ready(function() {
 				var abrir = localStorage.getItem("apartado-abierto");
-				cargarContenido(abrir);  
+				cargarContenido(abrir);
+			
+				$('a[href*="#externo"]').click(function(event) {
+					event.preventDefault();
+					var ruta = $(this).attr('href') + "";
+					ruta = ruta.split('-');
+					window.open(ruta[1], '_system');
+				});
 			});
-
+			
 		</script>
 		<style>
-
+		
 		</style>
 	</head>
 	<body>
 		<div id="wrapper">
-
+		
 			<header id="header">
 				<img  src="images/top.png"/>
 			</header><!-- #header-->
 			<section id="middle">
-
+			
 				<div id="container">
 					<aside id="sideLeft">
 						<a href="index.html" >
@@ -63,12 +72,12 @@
 							</div>
 							<div id="buscador-phone">
 								<input class="search-input" placeholder="Buscar" />
-
+								
 							</div>
-
+							
 						</div>
 						<div id="myModal" class="reveal-modal">
-
+						
 							<img class="icon-imprimir" src="images/imprimir.png" />
 							<a href="mailto:direccion@correo.com?subject=Compartiendo%20Tysabri&reg;&body=Hola,%20quiero%20compartir%20contigo%20este%20enlace%20de%20acceso%20a%20la%20adaptación%20interactiva%20multiplataforma%20de%20la%20ficha%20técnica%20de%20Tysabri®%20desarrollada%20por%20Biogen%20Idec.">
 								<img class="icon-correo" src="images/correo.png" />
@@ -86,13 +95,13 @@
 									<td>
 										<video id="video" width="250" height="180" controls>
 											<source src="video.mp4" type="video/mp4" />
-
+											
 										</video>
 									</td>
 								</tr>
 							</table>
 						</div>
-
+						
 						<div id="modalVideo-tablet" class="reveal-modal">
 							<div id="mask-1"></div>
 							<div class="close-reveal-modal">
@@ -103,13 +112,13 @@
 									<td>
 										<video id="video" width="500" height="240" controls>
 											<source src="video.mp4" type="video/mp4" />
-
+											
 										</video>
 									</td>
 								</tr>
 							</table>
 						</div>
-
+						
 						<div id="buscar-ficha">
 							<div id="buscador" align="right">
 								<input class="search-input" placeholder="Buscar" />
@@ -118,25 +127,25 @@
 						</div>
 						<div class="header-barra"></div>
 						<h2 class="ficha-titulo">Ficha Técnica</h2>
-
+						
 						<ul class="accordion">
 							<li>
 								<a class="lista-elemento" href="#1"></a>
 								<div></div>
-
+								
 							</li>
 							<li>
 								<a class="lista-elemento" href="#2"></a>
 								<div></div>
-
+								
 							</li>
 							<li>
 								<a class="lista-elemento" href="#3"></a>
 								<div></div>
-
+								
 							</li>
 							<li>
-
+							
 								<a class="lista-elemento" href="#4">
 									<div class="texto-titulo-lista">4. DATOS CLÍNICOS</div><span class="mas-menos"></span>
 								</a>
@@ -144,47 +153,47 @@
 									<li>
 										<a class="lista-elemento" href="#4-1"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a  class="lista-elemento" href="#4-2"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#4-3"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#4-4"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#4-5"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a  class="lista-elemento" href="#4-6"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#4-7"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#4-8"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#4-9"></a>
 										<div></div>
-
+										
 									</li>
 								</ul>
 							</li>
@@ -196,17 +205,17 @@
 									<li>
 										<a class="lista-elemento" href="#5-1"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#5-2"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#5-3"></a>
 										<div></div>
-
+										
 									</li>
 								</ul>
 							</li>
@@ -218,7 +227,7 @@
 									<li>
 										<a class="lista-elemento" href="#6-1"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#6-2"></a>
@@ -227,29 +236,29 @@
 									<li>
 										<a class="lista-elemento" href="#6-3"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#6-4"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#6-5"></a>
 										<div></div>
-
+										
 									</li>
 									<li>
 										<a class="lista-elemento" href="#6-6"></a>
 										<div></div>
-
+										
 									</li>
 								</ul>
 							</li>
 							<li>
 								<a class="lista-elemento" href="#7"></a>
 								<div></div>
-
+								
 							</li>
 							<li>
 								<a class="lista-elemento" href="#8"></a>
@@ -266,7 +275,7 @@
 						</ul>
 					</div><!-- #content-->
 				</div><!-- #container-->
-
+				
 			</section><!-- #middle-->
 			<footer id="footer-ficha">
 				<div class="footer-barra"></div>
@@ -293,9 +302,9 @@
 					</a>
 				</div>
 			</footer>
-
+			
 		</div><!-- fin del wrapper -->
-
+		
 	</body>
-
+	
 </html>

@@ -139,6 +139,7 @@
 			var closeButton = $('.' + options.dismissmodalclass).bind('click.modalEvent', function () {
 				modal.trigger('reveal:close');
 				$('#mask-1').hide();
+                document.getElementById('myvideotag').pause();
 			});
 			
 			if (options.closeonbackgroundclick) {
