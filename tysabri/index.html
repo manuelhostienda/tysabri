@@ -32,11 +32,11 @@
 				<span class="titulo-modal">INTRODUCIR CÓDIGO</span>
                 <input type="text" placeholder="USUARIO" id="usuario" />
 				<input type="password" placeholder="CÓDIGO DE ACCESO" id="passwd" />
-				<div class="ayuda" style="display:none; color:yellow; margin-bottom:1%; font-family:helvetica">Contraseña incorrecta!.</div>
+				<div class="ayuda" style="display:none; color:yellow; margin-bottom:1%; font-family:helvetica">Usuario o contraseña incorrecta!.</div>
 				<div id="no-2" class="boton-no">Cancelar</div>
 				<div id="si-2" class="boton-si">Continuar</div>
 				<div class="disclaimer">
-					Si no dispone del código, puede obtenerlo en <span class="enlace">www.biogenidec.es</span>
+					Si no dispone de usuario o código, puede obtenerlo en <span class="enlace">www.biogenidec.es</span>
 				</div>
 			</div>
 
@@ -413,7 +413,8 @@
 				$('#si-2').click(function(e) {
 					//Cancel the link behavior
 					clave = $('#passwd').val() + "";
-					if (clave.toUpperCase() == "TYSABRI13") {
+                    usuario=$('#usuario').val()+"";
+					if ((clave.toUpperCase() == "TYSABRI13")&&(usuario.toUpperCase()=="DOCTR@")) {
 						e.preventDefault();
 						localStorage.setItem("autenticado", "si");
 						$('#mask-2, .window').hide();                     
@@ -423,10 +424,9 @@
 					}
 				});
 			
-				$("#passwd").keypress(function(e) {
+				$("#passwd,#usuario").keypress(function(e) {
 					if (e.which == 13) {
 						$('#si-2').click();
-						localStorage.setItem("autenticado", "si");
 					}
 				});
 			
