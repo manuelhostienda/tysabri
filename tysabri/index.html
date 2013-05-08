@@ -12,25 +12,25 @@
 	</head>
 	<body>
 		<div id="boxes-1">
-			<!-- #customize your modal window here -->
+
 			<div id="dialog-1" align="center" class="window">
 				<span class="titulo-modal">¿ES USTED PROFESIONAL SANITARIO?</span>
-				<!-- close button is defined as close class -->
+
 				<div id="no-1" class="boton-no">No</div>
 				<div id="si-1" class="boton-si">Si</div>
 				<div class="disclaimer"> La informacion contenida en esta aplicación esta dirigida exclusivamente al profesional
 					sanitario. Tanto el acceso a dicha información como el uso que pueda hacerse del contenido de la misma será
 					responsabilidad exclusiva del usuario </div>
 			</div>
-			<!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
 			<div id="mask-1"></div>
 		</div>
 
 		<!----------------------------MODAL DE INTRODUCIR LA CONTRASEÑA------------------------->
 		<div id="boxes-2">
-			<!-- #customize your modal window here -->
+
 			<div id="dialog-2" class="window" align="center">
 				<span class="titulo-modal">INTRODUCIR CÓDIGO</span>
+                <input type="text" placeholder="USUARIO" id="usuario" />
 				<input type="password" placeholder="CÓDIGO DE ACCESO" id="passwd" />
 				<div class="ayuda" style="display:none; color:yellow; margin-bottom:1%; font-family:helvetica">Contraseña incorrecta!.</div>
 				<div id="no-2" class="boton-no">Cancelar</div>
@@ -39,9 +39,9 @@
 					Si no dispone del código, puede obtenerlo en <span class="enlace">www.biogenidec.es</span>
 				</div>
 			</div>
-			<!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
+
 			<div id="mask-2"></div>
-		</div>
+		</div> 
 
 		<div id="wrapper">
 			<header id="header">
@@ -467,6 +467,8 @@
                 $('.biogen-elan').click(function(){
                     window.open('http://www.biogenidec.es', '_system');
                 });
+                
+                
 			});      
 		</script>
 	</body>

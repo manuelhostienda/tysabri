@@ -19,7 +19,7 @@
 	#wrapper
 	{
 		min-width: 320px;
-		margin: 0 auto;
+		margin: 0 auto; 
 	}
 
 	/* Header
@@ -381,7 +381,7 @@
 
 	.reveal-modal
 	{
-		visibility: hidden;
+		visibility:hidden;
 		top: 100px;
 		background: rgb(250, 248, 248);
 		position: absolute;
@@ -645,5 +645,8 @@
 	{
 		text-decoration: none;
 	}
-
+    
+    #modalVideo-tablet{
+        display:none;
+    }
 }
