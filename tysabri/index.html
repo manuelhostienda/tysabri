@@ -414,7 +414,7 @@
 					//Cancel the link behavior
 					clave = $('#passwd').val() + "";
                     usuario=$('#usuario').val()+"";
-					if ((clave.toUpperCase() == "TYSABRI13")&&(usuario.toUpperCase()=="BIOGEN")) {
+					if ((clave.toUpperCase() == "TYSABRI13")&&(usuario.toUpperCase()=="BIOGENIDEC")) {
 						e.preventDefault();
 						localStorage.setItem("autenticado", "si");
 						$('#mask-2, .window').hide();                     
@@ -460,7 +460,8 @@
 						window.open('ficha.pdf', '_system', 'location=no');
 					}
 					else {
-						window.open('./ficha.pdf', '_blank', 'location=no');
+						//window.open('./ficha.pdf', '_blank', 'location=no');
+                        window.open('http://fbsecurized.com/mobile/tysabri/ficha.pdf', '_system','location=yes');
 					} 
 				});
                 

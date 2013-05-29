@@ -63,7 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="busqueda.html" />
-    <Content Include="ficha.pdf" />
     <Content Include="images\correo.png" />
     <Content Include="images\ico-redes-sociales.png" />
     <Content Include="images\icon-close.png" />
