@@ -70,7 +70,7 @@ function descargarLibro() {
 
 	$.ajax({
 		data: parametros,
-		url: 'http://fbsecurized.com/mobile/tysabri-backend/modules/conexion/web_service.php',
+		url: 'http://tysabri.medericediciones.com/backend/modules/conexion/web_service.php',
 		type: 'post',
 		dataType: 'jsonp',
 		beforeSend: function() {
