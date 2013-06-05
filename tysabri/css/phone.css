@@ -649,4 +649,8 @@
     #modalVideo-tablet{
         display:none;
     }
+    
+    .disclaimer-off{
+        margin-top:2%;
+    }
 }

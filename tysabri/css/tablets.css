@@ -516,6 +516,10 @@ and (orientation: landscape)
 		width: 40px;
 	}
     
+       .disclaimer-off{
+        margin-top:0%;
+    }
+    
 }
 
 /* ipad portrait */
@@ -997,5 +1001,9 @@ and (orientation: portrait)
 	{
 		width: 40px;
 	}
+    
+    .disclaimer-off{
+        margin-top:0%;
+    }
 
 }

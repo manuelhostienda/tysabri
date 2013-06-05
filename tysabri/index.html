@@ -20,7 +20,7 @@
 				<div id="si-1" class="boton-si">Si</div>
 				<div class="disclaimer"> La informacion contenida en esta aplicación esta dirigida exclusivamente al profesional
 					sanitario. Tanto el acceso a dicha información como el uso que pueda hacerse del contenido de la misma será
-					responsabilidad exclusiva del usuario </div>
+					responsabilidad exclusiva del usuario. </div>
 			</div>
 			<div id="mask-1"></div>
 		</div>
@@ -391,8 +391,11 @@
 				$('#no-1').click(function(e) {
 					//Cancel the link behavior
 					e.preventDefault();
-					$('#mask-1, .window').hide();
-					$('a[name=modal-1]').trigger('click');
+					$('#no-1').remove();
+                    $('#si-1').remove();
+                    $('.titulo-modal').remove();
+                    $('.disclaimer').addClass("disclaimer-off");
+                    $('.disclaimer').html("La informacion contenida en esta aplicacion esta dirigida exclusivamente al profesional sanitario.");
 				});
 			
 				$('#no-2').click(function(e) {
@@ -414,7 +417,7 @@
 					//Cancel the link behavior
 					clave = $('#passwd').val() + "";
                     usuario=$('#usuario').val()+"";
-					if ((clave.toUpperCase() == "TYSABRI")&&(usuario.toUpperCase()=="BIOGENIDEC")) {
+					if ((clave.toUpperCase() == "TYSABRI")&&(usuario.toUpperCase()=="BIOGEN")) {
 						e.preventDefault();
 						localStorage.setItem("autenticado", "si");
 						$('#mask-2, .window').hide();                     
