@@ -392,14 +392,14 @@
 					//Cancel the link behavior
 					e.preventDefault();
 					$('#mask-1, .window').hide();
-					navigator.app.exitApp();
+					$('a[name=modal-1]').trigger('click');
 				});
 			
 				$('#no-2').click(function(e) {
 					//Cancel the link behavior
 					e.preventDefault();
 					$('#mask-2, .window').hide();
-					navigator.app.exitApp();
+					$('a[name=modal-1]').trigger('click');
 				});
 			
 				//if close button is clicked
