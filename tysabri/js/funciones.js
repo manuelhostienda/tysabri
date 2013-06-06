@@ -7,7 +7,6 @@ $(document).ready(function() {
 
 	$('.boton-buscar').click(function() {
 		var textoABuscar = $(this).parent().children().eq(0).val();
-
 		redireccionBusqueda(textoABuscar);
 	});
 
@@ -117,44 +116,10 @@ function getSeccion(seccion) {
 	return texto;
 }
 
-/*function buscarTexto(texto) {
-	var ArrayBusquedas = new Array();
-	for (i = 0; i <= localStorage.length - 1; i++) {
-		var key = localStorage.key(i);
-   	//para que no confunda los otros elementos que estan en el local Storage
-		if ((key != "texto-busqueda") && (key != "version") && (key != "apartado-abierto") && (key != "ultimaActualizacion") && (key != "autenticado") && (key != "apartado-abierto-busqueda")) {
-			var val = JSON.parse(localStorage.getItem(key));
-			$("#busqueda-temporal").html(val.contenido);
-            // var resultados = $("#busqueda-temporal:contains('"+texto+"')");
-			var resultados = $("#busqueda-temporal").children().filter(':containsCI(' + texto + ')');
-			$.each(resultados, function(index, value) {
-				var elemento = {
-					"id": key,
-					"titulo": val.titulo,
-					"contenido": value
-				}
-
-				ArrayBusquedas.push(elemento);
-				$("#busqueda-temporal").html('');
-			});
-		}
-	}
-
-	llenarBusquedas(ArrayBusquedas);
-}*/
-
-function findString (str) {
-  strFound=self.find(str);
-  if (!strFound) {
-   strFound=self.find(str,0,1);
-   while (self.find(str,0,1)) continue;
-  }
- }
-
 function buscarTexto(texto) {
 	var ArrayBusquedas = new Array();
     var Apartados=new Array("1","2","3","4.1","4.2","4.3","4.4","4.5","4.6","4.7","4.8","4.9","5.1","5.2","5.3","6.1","6.2","6.3","6.4","6.5","6.6","7","8","9");
-	for (i = 0; i < Apartados.length-1; i++) {
+	for (i = 0; i < Apartados.length; i++) {
  
 			var val = JSON.parse(localStorage.getItem(Apartados[i]));
 			$("#busqueda-temporal").html(val.contenido);
